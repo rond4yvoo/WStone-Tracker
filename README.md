@@ -40,6 +40,10 @@ pip install -r requirements.txt
 python3 wstone.py
 ```
 
+## Adding a Directory
+
+Go to `File > Open Texture Directory...` and choose the `inject` directory in your `SK_Res` folder.
+
 # Features
 
 ## File Display
@@ -57,6 +61,8 @@ Search .dds file by either hex code or ID.
 ## Duplicate Removal
 
 Find duplicate .dds files in separate directories and pick one to keep.
+
+> WARNING: Whorestone Tracker is still under development and is not full tested. Any files deleted by the duplicate remover cannot be recovered afterwards. Consider making a backup before using this feature.
 
 # Future Improvements
 
