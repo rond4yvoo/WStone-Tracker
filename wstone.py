@@ -247,14 +247,19 @@ class MainWindow:
 
     def on_update_search(self, evt):
         sq = self.search_query.get()
+        print(sq)
         if sq:
-            self.tex_search_df = self.tex_df.query('tex_id.str.contains(@sq) or tex_hex.str.contains(@sq)')
+            df1 = self.tex_df[self.tex_df['tex_id'].str.contains(sq, na=False)]
+            df2 = self.tex_df[self.tex_df['tex_hex'].str.contains(sq, na=False)]
+            self.tex_search_df = pd.concat([df1, df2], ignore_index=True, sort=False).drop_duplicates(keep='first')
             self.tex_search_df.reset_index(inplace = True, drop = True)
+            print(self.tex_search_df.head)
             self.listbox.delete(0, tk.END)
             for img in self.tex_search_df['tex_hex']:
                 self.listbox.insert(tk.END, img)
         else:
             self.listbox.delete(0, tk.END)
+            self.tex_search_df = self.tex_df
             for img in self.tex_df['tex_hex']:
                 self.listbox.insert(tk.END, img)
 
