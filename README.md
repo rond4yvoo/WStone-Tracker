@@ -56,7 +56,7 @@ Associates each texture file with an ID, usually card name, for searching and re
 
 ## Search
 
-Search .dds file by either hex code or ID.
+Search .dds file with regex. Matches either hex code or ID.
 
 ## Duplicate Removal
 

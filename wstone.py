@@ -12,7 +12,7 @@ class MainWindow:
     #   data is a dict which contains:
     #       tex_dir - the main texture directory
     #       options - miscellaneous options
-    #   mapping_df_path is the path to data.json
+    #   data_path is the path to data.json
     #   texdirname is a StringVar which copies data['tex_dir']
     #   texidname is a StringVar, the id of the current texture from mapping_df
     #   mapping_df is a dataframe derived from FullTextureList.csv
@@ -255,11 +255,10 @@ class MainWindow:
         sq = self.search_query.get()
         print(sq)
         if sq:
-            df1 = self.tex_df[self.tex_df['tex_id'].str.contains(sq, na=False)]
-            df2 = self.tex_df[self.tex_df['tex_hex'].str.contains(sq, na=False)]
+            df1 = self.tex_df[self.tex_df['tex_id'].str.match(sq, na=False)]
+            df2 = self.tex_df[self.tex_df['tex_hex'].str.match(sq, na=False)]
             self.tex_search_df = pd.concat([df1, df2], ignore_index=True, sort=False).drop_duplicates(keep='first')
             self.tex_search_df.reset_index(inplace = True, drop = True)
-            print(self.tex_search_df.head)
             self.listbox.delete(0, tk.END)
             for img in self.tex_search_df['tex_hex']:
                 self.listbox.insert(tk.END, img)
