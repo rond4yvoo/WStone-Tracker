@@ -64,11 +64,19 @@ Find duplicate .dds files in separate directories and pick one to keep.
 
 > WARNING: Whorestone Tracker is still under development and is not full tested. Any files deleted by the duplicate remover cannot be recovered afterwards. Consider making a backup before using this feature.
 
-# Future Improvements
-
 ## Remapping
 
-Use a .csv file to rename a large group of .dds files programatically. 
+Use a .csv file to rename a large group of .dds files programatically. The .csv file must have the format:
+
+```csv
+hex,id
+[hex code 1],[id 1]
+[hex code 2],[id 2]
+[hex code 3],[id 3]
+...
+```
+
+similar to `FullTextureList.csv`.
 
 # How to Contribute
 

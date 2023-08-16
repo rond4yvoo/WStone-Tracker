@@ -1,4 +1,5 @@
 import os
+import sys
 import glob
 import json
 import pandas as pd
@@ -11,9 +12,11 @@ class MainWindow:
     #   data is a dict which contains:
     #       tex_dir - the main texture directory
     #       options - miscellaneous options
+    #   mapping_df_path is the path to data.json
     #   texdirname is a StringVar which copies data['tex_dir']
     #   texidname is a StringVar, the id of the current texture from mapping_df
     #   mapping_df is a dataframe derived from FullTextureList.csv
+    #   mapping_df_path is the path to FullTextureList.csv
     #   tex_df is a dataframe which contains:
     #       tex_relpath - relative path of .dds file
     #       tex_hex - isolated hex code of .dds file
@@ -29,6 +32,9 @@ class MainWindow:
         self.root.grid_rowconfigure(0, weight=1)
         self.root.grid_columnconfigure(0, weight=1)
 
+        self.mapping_df_path = os.path.join(sys.path[0], 'FullTextureList.csv')
+        self.data_path = os.path.join(sys.path[0], 'data.json')
+
         self.texdirname = StringVar()
         self.texdirname.set('No path selected')
 
@@ -42,22 +48,22 @@ class MainWindow:
         self.draw()
 
     def save(self):
-        with open('data.json', 'w', encoding='utf-8') as f:
+        with open(self.data_path, 'w', encoding='utf-8') as f:
             json.dump(self.data, f, ensure_ascii=False, indent=4)
     
     def load(self):
-        if os.path.isfile('data.json'):
+        if os.path.isfile(self.data_path):
             try:
-                f = open('data.json')
+                f = open(self.data_path)
                 self.data = json.loads(f.read())
             except ValueError:
                 self.data = {}
         else:
             self.data = {}
         
-        if os.path.isfile('FullTextureList.csv'):
+        if os.path.isfile(self.mapping_df_path):
             try:
-                self.mapping_df = pd.read_csv('FullTextureList.csv')
+                self.mapping_df = pd.read_csv(self.mapping_df_path)
             except ValueError:
                 self.mapping_df = pd.DataFrame()
         else:
@@ -87,7 +93,7 @@ class MainWindow:
             except (KeyError, IndexError) as e:
                 tex_id.append(None)
         
-        tex_dict = {"tex_relpath": tex_relpath, "tex_hex": tex_hex, 'tex_id': tex_id}
+        tex_dict = {'tex_relpath': tex_relpath, 'tex_hex': tex_hex, 'tex_id': tex_id}
         self.tex_df = pd.DataFrame(tex_dict)
         self.tex_search_df = self.tex_df
 
@@ -102,26 +108,26 @@ class MainWindow:
 
     def draw(self):
         left_frame = tk.Frame(self.root, width=350, height=600)
-        left_frame.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
+        left_frame.grid(row=0, column=0, padx=5, pady=5, sticky='nsew')
 
         right_frame = tk.Frame(self.root, width=450, height=600)
-        right_frame.grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
+        right_frame.grid(row=0, column=1, padx=5, pady=5, sticky='nsew')
         
         menubar = Menu(self.root)
     
         fileMenu = Menu(menubar, tearoff=0)
-        fileMenu.add_command(label="Open Texture Directory...", command=self.open_folder)
-        fileMenu.add_command(label="Reload Directory", command=self.reload)
-        menubar.add_cascade(label="File", menu=fileMenu)
+        fileMenu.add_command(label='Open Texture Directory...', command=self.open_folder)
+        fileMenu.add_command(label='Reload Directory', command=self.reload)
+        menubar.add_cascade(label='File', menu=fileMenu)
 
         toolsMenu = Menu(menubar, tearoff=0)
-        toolsMenu.add_command(label="Find Duplicates", command=self.find_duplicates)
-        toolsMenu.add_command(label="Remap...", command=self.remap)
-        menubar.add_cascade(label="Tools", menu=toolsMenu)
+        toolsMenu.add_command(label='Find Duplicates', command=self.find_duplicates)
+        toolsMenu.add_command(label='Remap...', command=self.remap)
+        menubar.add_cascade(label='Tools', menu=toolsMenu)
     
         optionsMenu = Menu(menubar, tearoff=0)
-        optionsMenu.add_command(label="Flip Image", command=self.set_flip_image)
-        menubar.add_cascade(label="Options", menu=optionsMenu)
+        optionsMenu.add_command(label='Flip Image', command=self.set_flip_image)
+        menubar.add_cascade(label='Options', menu=optionsMenu)
     
         self.root.config(menu=menubar)
     
@@ -146,7 +152,7 @@ class MainWindow:
     
         self.listbox = tk.Listbox(
             left_frame, 
-            bg = "white",
+            bg = 'white',
             activestyle = 'dotbox',
             yscrollcommand = tk.Scrollbar.set
         )
@@ -163,7 +169,7 @@ class MainWindow:
         except KeyError:
             pass
     
-        self.listbox.pack(fill="both", expand=True)
+        self.listbox.pack(fill='both', expand=True)
     
         dirlabel = tk.Label(
             right_frame,
@@ -271,7 +277,35 @@ class MainWindow:
         self.reload()
     
     def remap(self):
-        print("Remap!")
+        messagebox.showinfo('Information', 'Select mapping .csv file.')
+        remap_file = filedialog.askopenfilename(filetypes =[('CSV files', '*.csv')])
+        new_mapping_df = pd.DataFrame()
+        new_mapping_dict = {}
+        
+        if os.path.isfile(remap_file):
+            try:
+                new_mapping_df = pd.read_csv(remap_file)
+                new_mapping_dict = new_mapping_df.set_index('id').to_dict()
+            except (pd.errors.EmptyDataError, pd.errors.ParserError) as e:
+                messagebox.showerror('Error', 'Invalid .csv file.')
+                return
+        else:
+            messagebox.showerror('Error', 'Invalid .csv file.')
+            return
+        
+        try:
+            self.tex_df['tex_hex'] = self.tex_df['tex_id'].map(new_mapping_dict).fillna(self.tex_df['tex_hex'])
+            self.mapping_df['hex'] = self.mapping_df['id'].map(new_mapping_dict).fillna(self.mapping_df['hex'])
+
+            for index, row in self.tex_df.iterrows():
+                new_relpath = os.path.join(os.path.dirname(row['tex_relpath']), row['tex_hex'] + '.dds')
+                os.rename(os.path.join(self.data['tex_dir'], row['tex_relpath']), os.path.join(self.data['tex_dir'], new_relpath))
+        except KeyError:
+            pass
+
+        combined_mapping_df = self.tex_df[['tex_hex', 'tex_id']].dropna()
+        new_mapping_df.to_csv(self.mapping_df_path, index=False)
+        self.reload()
 
 class DupeWindow:
     def __init__(self, root, data, tex_df):
@@ -321,15 +355,15 @@ class DupeWindow:
                     tex_df = tex_df[tex_df.tex_relpath != name_dict[hex]]
                     name_dict[hex] = i
         
-        messagebox.showinfo("Information", "Operation successful.")
+        messagebox.showinfo('Information', 'Operation successful.')
         self.dupe_window.destroy()
     
     def draw(self):
         dupe_left_frame = tk.Frame(self.dupe_window, width=640, height=600)
-        dupe_left_frame.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
+        dupe_left_frame.grid(row=0, column=0, padx=5, pady=5, sticky='nsew')
 
         dupe_right_frame = tk.Frame(self.dupe_window, width=640, height=600)
-        dupe_right_frame.grid(row=0, column=1, padx=5, pady=5, sticky="nsew")
+        dupe_right_frame.grid(row=0, column=1, padx=5, pady=5, sticky='nsew')
 
         im = Image.new('RGB', (500, 500))
         dupe_image_1 = ImageTk.PhotoImage(im)
