@@ -83,7 +83,7 @@ class MainWindow:
     def load_folderpath(self, folderpath):
         self.texdirname.set('Path: ' + folderpath)
         self.data['tex_dir'] = folderpath
-        fullimgpath = glob.glob(folderpath + '/**/*.dds', recursive=True)
+        fullimgpath = glob.glob(folderpath + '/**/*.[Dd][Dd][Ss]', recursive=True)
         tex_relpath = [os.path.relpath(fip, folderpath) for fip in fullimgpath]
         tex_hex = [os.path.basename(rp).split('.')[0] for rp in tex_relpath]
         tex_id = []
