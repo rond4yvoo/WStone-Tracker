@@ -2,6 +2,7 @@ import os
 import sys
 import glob
 import json
+import re
 import pandas as pd
 from PIL import Image, ImageTk
 import tkinter as tk
@@ -253,10 +254,13 @@ class MainWindow:
 
     def on_update_search(self, evt):
         sq = self.search_query.get()
-        print(sq)
         if sq:
-            df1 = self.tex_df[self.tex_df['tex_id'].str.match(sq, na=False)]
-            df2 = self.tex_df[self.tex_df['tex_hex'].str.match(sq, na=False)]
+            try:
+                df1 = self.tex_df[self.tex_df['tex_id'].str.match(sq, na=False)]
+                df2 = self.tex_df[self.tex_df['tex_hex'].str.match(sq, na=False)]
+            except re.error: 
+                return
+            
             self.tex_search_df = pd.concat([df1, df2], ignore_index=True, sort=False).drop_duplicates(keep='first')
             self.tex_search_df.reset_index(inplace = True, drop = True)
             self.listbox.delete(0, tk.END)
