@@ -100,12 +100,7 @@ class MainWindow:
 
     def reload(self):
         self.load_folderpath(self.data['tex_dir'])
-        self.tex_search_df = self.tex_df
-        self.searchbox.delete(0, tk.END)
-        self.tex_search_df.reset_index(inplace = True, drop = True)
-        self.listbox.delete(0, tk.END)
-        for img in self.tex_search_df['tex_hex']:
-            self.listbox.insert(tk.END, img)
+        self.on_update_search(None)
 
     def draw(self):
         left_frame = tk.Frame(self.root, width=350, height=600)
@@ -159,10 +154,14 @@ class MainWindow:
         )
     
         self.listbox.bind('<<ListboxSelect>>', self.on_select)
+
         listscrollbar = tk.Scrollbar(self.listbox)
         listscrollbar.pack(side = tk.RIGHT, fill = tk.BOTH)
         self.listbox.config(yscrollcommand = listscrollbar.set)
         listscrollbar.config(command = self.listbox.yview)
+
+        aqua = self.root.tk.call('tk', 'windowingsystem') == 'aqua'
+        self.listbox.bind('<2>' if aqua else '<3>', self.on_right_click)
 
         try:
             for img in self.tex_df['tex_hex']:
@@ -223,7 +222,7 @@ class MainWindow:
     def open_folder(self):
         folderpath = filedialog.askdirectory()
 
-        if not os.path.exists(folderpath):
+        if not folderpath or not os.path.exists(folderpath):
             return
         
         self.load_folderpath(folderpath)
@@ -232,13 +231,7 @@ class MainWindow:
         for img in self.tex_df['tex_hex']:
             self.listbox.insert(tk.END, img)
 
-    def on_select(self, evt):
-        # evt is an event object
-        curselection = evt.widget.curselection()
-        if curselection == ():
-            return
-        
-        index = int(curselection[0])
+    def listbox_focus(self, index):
         im = Image.open(os.path.join(self.data['tex_dir'], self.tex_search_df['tex_relpath'][index] ))
 
         if self.tex_search_df['tex_id'][index] is not None:
@@ -251,6 +244,15 @@ class MainWindow:
             im = im.transpose(Image.FLIP_TOP_BOTTOM)
         self.photo_image = ImageTk.PhotoImage(im)
         self.canvas.itemconfigure(self.image_output, image=self.photo_image)
+
+    def on_select(self, evt):
+        # evt is an event object
+        curselection = evt.widget.curselection()
+        if curselection == ():
+            return
+        
+        index = int(curselection[0])
+        self.listbox_focus(index)
 
     def on_update_search(self, evt):
         sq = self.search_query.get()
@@ -284,15 +286,15 @@ class MainWindow:
         remap_file = filedialog.askopenfilename(filetypes =[('CSV files', '*.csv')])
         new_mapping_df = pd.DataFrame()
         new_mapping_dict = {}
+
+        if not remap_file or not os.path.exists(remap_file):
+            messagebox.showerror('Error', 'Invalid .csv file.')
+            return
         
-        if os.path.isfile(remap_file):
-            try:
-                new_mapping_df = pd.read_csv(remap_file)
-                new_mapping_dict = new_mapping_df.set_index('id').to_dict()
-            except (pd.errors.EmptyDataError, pd.errors.ParserError) as e:
-                messagebox.showerror('Error', 'Invalid .csv file.')
-                return
-        else:
+        try:
+            new_mapping_df = pd.read_csv(remap_file)
+            new_mapping_dict = new_mapping_df.set_index('id').to_dict()
+        except (pd.errors.EmptyDataError, pd.errors.ParserError, KeyError) as e:
             messagebox.showerror('Error', 'Invalid .csv file.')
             return
         
@@ -306,8 +308,106 @@ class MainWindow:
         except KeyError:
             pass
 
-        combined_mapping_df = self.tex_df[['tex_hex', 'tex_id']].dropna()
-        new_mapping_df.to_csv(self.mapping_df_path, index=False)
+        combined_mapping_df = pd.concat([self.mapping_df, new_mapping_df], ignore_index=True, sort=False).drop_duplicates(keep='first')
+        combined_mapping_df.to_csv(self.mapping_df_path, index=False)
+        self.reload()
+
+    def on_right_click(self, evt):
+        widget = evt.widget
+        self.right_click_index = widget.nearest(evt.y)
+        self.listbox.selection_clear(0,tk.END)
+        self.listbox.selection_set(self.right_click_index)
+        self.listbox.activate(self.right_click_index)
+        self.listbox_focus(self.right_click_index)
+
+        _, yoffset, _, height = widget.bbox(self.right_click_index)
+        if evt.y > height + yoffset + 5: # XXX 5 is a niceness factor :)
+            # Outside of widget.
+            return
+
+        self.menu = tk.Menu(tearoff=0)
+        self.menu.add_command(label='Change ID', command=self.right_click_change_id)
+        self.menu.add_command(label='Change Hex Code', command=self.right_click_change_hex)
+        self.menu.add_command(label='Delete Entry', command=self.right_click_delete_entry)
+        self.menu.tk_popup(evt.x_root, evt.y_root, 0)
+        self.menu.grab_release()
+
+        self.right_click_waitvar = tk.IntVar()
+        self.right_click_stringvar = tk.StringVar()
+
+    def right_click_draw(self, label_text, e_initial):
+        self.input_window = tk.Toplevel(self.root)
+        self.input_window.resizable(False, False)
+        self.input_window.title('Input')
+        self.input_window.grab_set()
+
+        l = tk.Label(self.input_window, text=label_text)
+        l.grid(column=0, row=0, columnspan=2, sticky="nsew", padx=5, pady=5)
+
+        e = tk.Entry(self.input_window, textvariable=self.right_click_stringvar)
+        if e_initial:
+            e.insert(0, e_initial)
+        e.grid(column=0, row=1, columnspan=2, sticky="nsew", padx=5, pady=5)
+
+        confirm_button = tk.Button(self.input_window, text='Confirm', command=lambda : self.right_click_waitvar.set(0))
+        confirm_button.grid(column=0, row=2, padx=5, pady=5)
+
+        cancel_button = tk.Button(self.input_window, text='Cancel', command=lambda : self.right_click_waitvar.set(1))
+        cancel_button.grid(column=1, row=2, padx=5, pady=5)
+
+        self.input_window.wait_variable(self.right_click_waitvar)
+        self.input_window.destroy()
+
+        if self.right_click_waitvar.get() == 0:
+            return self.right_click_stringvar.get()
+        else:
+            return None
+    
+    def right_click_change_id(self):
+        curr_hex = self.tex_search_df['tex_hex'][self.right_click_index]
+        curr_id = self.tex_search_df['tex_id'][self.right_click_index]
+
+        output = self.right_click_draw('Enter new ID.', curr_id)
+
+        if output:
+            try:
+                search_index = self.mapping_df.loc[(self.mapping_df['hex'] == curr_hex) & (self.mapping_df['id'] == curr_id)].index[0]
+                self.mapping_df['id'][search_index] = output
+            except IndexError:
+                new_row = pd.DataFrame([{'hex':curr_hex, 'id':output}])
+                self.mapping_df = pd.concat([self.mapping_df, new_row], ignore_index=True)
+            
+            self.mapping_df.to_csv(self.mapping_df_path, index=False)
+            self.reload()
+            
+    def right_click_change_hex(self):
+        curr_relpath = self.tex_search_df['tex_relpath'][self.right_click_index]
+        curr_hex = self.tex_search_df['tex_hex'][self.right_click_index]
+        curr_id = self.tex_search_df['tex_id'][self.right_click_index]
+        
+        output = self.right_click_draw('Enter new hex code.', curr_hex)
+
+        if output:
+            full_path = os.path.join(self.data['tex_dir'], self.tex_search_df['tex_relpath'][self.right_click_index])
+            os.rename(full_path, os.path.join(self.data['tex_dir'], os.path.dirname(curr_relpath), output + '.dds'))
+
+            try:
+                search_index = self.mapping_df.loc[(self.mapping_df['hex'] == curr_hex) & (self.mapping_df['id'] == curr_id)].index[0]
+                self.mapping_df['hex'][search_index] = output
+            except IndexError:
+                pass
+            
+            self.mapping_df.to_csv(self.mapping_df_path, index=False)
+            self.reload()
+    
+    def right_click_delete_entry(self):
+        response = tk.messagebox.askyesno(title='confirmation', message='Are you sure you want to delete this file?')
+
+        if not response:
+            return
+        
+        full_path = os.path.join(self.data['tex_dir'], self.tex_search_df['tex_relpath'][self.right_click_index])
+        os.remove(full_path)
         self.reload()
 
 class DupeWindow:

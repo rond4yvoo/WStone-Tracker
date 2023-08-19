@@ -50,6 +50,10 @@ Go to `File > Open Texture Directory...` and choose the `inject` directory in yo
 
 Visually displays all .dds textures files in your `inject` directory of choice. Also saves the location of all current .dds files in a JSON file.
 
+## Right-Click Context Menu
+
+Right-click any file within the file display to show a context menu. From there, you can change the ID or hex code of an entry, or delete the file altogether.
+
 ## ID Association
 
 Associates each texture file with an ID, usually card name, for searching and remapping.
@@ -66,7 +70,7 @@ Find duplicate .dds files in separate directories and pick one to keep.
 
 ## Remapping
 
-Use a .csv file to rename a large group of .dds files programatically. The .csv file must have the format:
+Use a `.csv` file to rename a large group of .dds files programatically. The .csv file must have the format:
 
 ```csv
 hex,id
@@ -77,6 +81,51 @@ hex,id
 ```
 
 similar to `FullTextureList.csv`.
+
+### How It Works
+
+Let's say we have our current `FullTextureList.csv`:
+
+```csv
+hex,id
+00000001,Circle of Healing
+00000002,Holy Smite
+```
+
+And a new mapping `.csv` file:
+
+```csv
+hex,id
+00000003,Circle of Healing
+00000004,Prophet Velen
+```
+
+We first replace old existing mappings with new ones in `FullTextureList.csv`:
+
+```csv
+hex,id
+00000003,Circle of Healing
+00000002,Holy Smite
+```
+
+We then concatenate both `.csv` files:
+
+```csv
+hex,id
+00000003,Circle of Healing
+00000002,Holy Smite
+00000003,Circle of Healing
+00000004,Prophet Velen
+```
+
+And finally remove any duplicates.
+
+```csv
+hex,id
+00000003,Circle of Healing
+00000002,Holy Smite
+00000004,Prophet Velen
+```
 
 # How to Contribute
 
