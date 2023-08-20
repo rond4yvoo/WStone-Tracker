@@ -80,7 +80,7 @@ hex,id
 ...
 ```
 
-similar to `FullTextureList.csv`.
+similar to `FullTextureList.csv`. As a result `FullTextureList.csv` has to have no ID duplicates and no hex duplicates. 
 
 ### How It Works
 

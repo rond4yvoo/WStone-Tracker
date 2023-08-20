@@ -7,8 +7,8 @@ E706D4D8,Flower Child Lunara (avatar)
 EA982572,Flower Child Lunara (golden avatar)
 AA0CCFA3,Silver Hand Recruit (token)
 B3C8401A,Wicked Knife (token)
-E789F00C,Kaldorei Vashj (avatar)
-62C0F77B,Kaldorei Vashj (avatar)
+E789F00C,Kaldorei Vashj (avatar 1)
+62C0F77B,Kaldorei Vashj (avatar 2)
 EB451C1D,Healing Totem (token)
 3B3E7BAA,Stoneclaw Totem (token)
 7F017C7F,Diver Nemsy (avatar)
@@ -35,8 +35,8 @@ E40EB275,Anti-Magic Shell
 3F092E76,Anti-Magic Shell (golden)
 8524EA88,Chillfallen Baron
 680E7DCC,Graveyard Shift
-C9E76C77,Graveyard Shift (golden)
-361DA125,Graveyard Shift (golden foreground)
+C9E76C77,Graveyard Shift (golden 1)
+361DA125,Graveyard Shift (golden 2)
 982CCDD5,Shambling Zombie (token)
 F2A9A195,Shambling Zombie (golden token)
 0680F99A,Rimefang Sword
@@ -103,7 +103,6 @@ C5C25359,Marrow Manipulator (golden)
 73036874,Frostmourne
 081C28D4,Frostwyrm's Fury
 29A5F0B6,Frostwyrm (token)
-081C28D4,Frostwyrm's Fury (golden)
 6853EB49,The Scourge
 09C49113,Battlefiend
 661BD812,Battlefiend (golden)
@@ -216,7 +215,7 @@ DCC7FFDC,Stand Against Darkness
 5403B0A4,Lothraxion the Redeemed
 AD8097B9,Tirion Fordring
 2789BB05,Circle of Healing
-EFB7EFB3,Prophet Velen\
+EFB7EFB3,Prophet Velen
 A601D1E2,Crimson Clergy
 D68A5CC2,Flash Heal
 6389F6F8,Holy Smite
@@ -235,8 +234,8 @@ B4B83816,Shadow Word: Ruin
 91DA4879,Lightbomb
 0C98935E,Catrina Muerte
 500FD53B,Conceal
-38AA0DCD,Conceal (golden)
-9F668E5B,Conceal (golden)
+38AA0DCD,Conceal (golden 1)
+9F668E5B,Conceal (golden 2)
 EE8CFA80,Assassin's Blade (golden)
 5BE16448,Vanish
 70400D2A,Sprint
@@ -414,8 +413,8 @@ D29AE6CB,Greater Arcane Missiles
 F76C8FFF,Abyssal Enforcer
 54C5FE68,Krul the Unshackled
 9061E606,I Know a Guy
-505E7E35,Jade Golem (token)
-753073DA,Jade Golem (token)
+505E7E35,Jade Golem (token 1)
+753073DA,Jade Golem (token 2)
 010E2D33,Kazakus
 265034DF,Mistress of Mixtures
 1DAA5987,Sergeant Sally
@@ -650,7 +649,7 @@ FE508742,Secret Passage
 BF4B7529,Magma Elemental (token)
 318B0EEE,Shadowlight Scholar
 45AA8886,Athletic Studies
-8D0FDED1,Athletic Studies
+8D0FDED1,Athletic Studies (golden)
 5438FC23,Rattlegore
 6696003C,Lightning Bloom
 6AC561C7,Marsuul Cub (token)
@@ -685,8 +684,8 @@ D769B5B5,Oh My Yogg! (golden)
 237596CA,Minefield
 8D8909B0,Ringmaster's Baton
 2FE66418,Tent Trasher
-2767AC70,Guidance (golden)
-3E21E19E,Guidance (golden)
+2767AC70,Guidance (golden 1)
+3E21E19E,Guidance (golden 2)
 3D9F16EC,Imprisoned Phoenix
 FD77BE96,Race Guard (token)
 15C4B7B9,Armor Vendor
@@ -723,8 +722,8 @@ FAEE93E9,Aimed Shot
 B3F49CA5,Rat King
 32F7FECF,Maestra of the Masquerade
 7B9A0185,Auctionhouse Gavel
-D5A44B7E,Auctionhouse Gavel (golden)
-EE08252C,Auctionhouse Gavel (golden)
+D5A44B7E,Auctionhouse Gavel (golden 1)
+EE08252C,Auctionhouse Gavel (golden 2)
 4AC3E702,Celestial Ink Set
 D5356580,Amulet of Undying
 3382764F,Heavy Plate
@@ -757,9 +756,9 @@ AECCC47F,Evasive Maneuvers
 C39B17A5,Command of Neptulon
 D9A6A568,Water Revenant (token)
 04A360EA,Glugg the Gulper
-BF0936DD,Glugg's Tail (token)
-36D8D41E,Glugg's Tail (token)
-BCA81D9B,Glugg's Tail (token)
+BF0936DD,Glugg's Tail (token 1)
+36D8D41E,Glugg's Tail (token 2)
+BCA81D9B,Glugg's Tail (token 3)
 D3E4E621,Immolate
 28A9A8DE,Immolate (golden)
 6EDB505A,Helmet Hermit
@@ -872,7 +871,7 @@ F5D40466,Archmage Staff (duels)
 615AC2F7,Bag of Stuffing (duels)
 57F769E6,Battle Totem (duels)
 153173AE,Creepy Curio (duels)
-73AA741F,Weeping Ghost (duels token)
+73AA741F,Weeping Ghost (duels token 1)
 1A1AA5BA,Crystal Gem (duels)
 40FF3EDA,Emerald Goggles (duels)
 2AEE0A13,Endurance Training (duels)
@@ -884,7 +883,6 @@ C26933A8,Greedy Pickaxe (duels)
 1F692891,Idols of Elune (duels)
 F55A6A35,Inspiring Presence (duels)
 019609FC,Legendary Loot (duels)
-8DA0EFB2,Looming Presence (duels)
 028F3FC8,Sticky Fingers (duels)
 CDD665CA,Mage Armor (duels)
 50AF6E8C,Mindpocalypse (duels)
@@ -897,8 +895,8 @@ BF5A1918,Ve'nari (battlegrounds avatar)
 49C27E61,Al'Akir (battlegrounds avatar)
 FF5D2A1C,Expedition Plans (battlegrounds hero power)
 AB1B7B6D,Demon Hunter Training (battlegrounds hero power)
-DCC883A6,"Cariel, the Chosen (battlegrounds avatar)"
-12D45568,"Cariel, the Chosen (battlegrounds avatar)"
+DCC883A6,"Cariel, the Chosen (battlegrounds avatar 1)"
+12D45568,"Cariel, the Chosen (battlegrounds avatar 2)"
 0AA889F6,Scourgewind Chenvaala (battlegrounds avatar)
 4BACF6F7,Volcanic Chenvaala (battlegrounds avatar)
 41C28DDC,C'Thun (battlegrounds avatar)
@@ -948,7 +946,6 @@ FE9FD60A,Party Elemental (battlegrounds)
 8932DE44,Vigilant Stoneborn (battlegrounds)
 6741B57B,Wargear
 925E4680,Ring Matron
-01839A58,Embrace the Elements (battlegrounds hero power)
 56F42C83,Cap'n Hoggarr (battlegrounds avatar)
 F4E8E021,Coach Eudora (battlegrounds avatar)
 2C9EAFB3,Torchbearer Blackthorn (battlegrounds avatar)
@@ -968,7 +965,6 @@ A29B2814,Broodmother (battlegrounds hero power)
 69F2C167,Menagerist (battlegrounds hero power)
 8DE65C4B,Reborn Rites (battlegrounds hero power)
 37AB2544,Star Scout Scabbs (battlegrounds avatar)
-C20A0EFA,Queen Waggtoggle (battlegrounds avatar)
 D5D0B0A4,Blood Gem (battlegrounds token)
 22A0E474,Ghastly Mask (battlegrounds)
 1002DEA4,Bream Counter (battlegrounds)
@@ -1001,8 +997,8 @@ BE459001,Tidemistress Athissa (battlegrounds)
 0F09D9BA,Upbeat Impressionist (battlegrounds)
 7AD4CBAF,Upbeat Upstart (battlegrounds)
 3772B01B,Zesty Shaker (battlegrounds)
-C7C9DBE9,Alterac Valley (mercenaries interface)
-D02E3A69,Alterac Valley (mercenaries interface)
+C7C9DBE9,Alterac Valley (mercenaries interface 1)
+D02E3A69,Alterac Valley (mercenaries interface 2)
 13E4D706,Blessing of Sacrifice (mercenaries ability)
 1AB77484,Seal of Light (mercenaries ability)
 23F2B294,Battlefury (mercenaries ability)
@@ -1020,11 +1016,11 @@ AF5159D7,Tidemistress Athissa (mercenaries golden)
 ABDB26DC,Fatal Strike (mercenaries ability)
 8150569D,Assassin's Blade (mercenaries ability)
 A1577A42,Kingpin's Bounty (mercenaries ability)
-528D8C80,Elise Starseeker (mercenaries)
-9D5B8626,Elise Starseeker (mercenaries golden)
-77FE7FDC,Elise Starseeker (mercenaries)
-AB3AB5C4,Elise Starseeker (mercenaries golden)
-92245A5E,Elise Starseeker (mercenaries golden)
+528D8C80,Elise Starseeker (mercenaries 1)
+9D5B8626,Elise Starseeker (mercenaries golden 1)
+77FE7FDC,Elise Starseeker (mercenaries 2)
+AB3AB5C4,Elise Starseeker (mercenaries golden 2)
+92245A5E,Elise Starseeker (mercenaries golden 3)
 6CC13150,Shimmering Toxin (mercenaries ability)
 D4356DF9,Blade Dance (mercenaries ability)
 F9C9A3C2,Lady Anaconda (mercenaries)
@@ -1070,18 +1066,18 @@ F50A95E4,Greater Arcane Missiles (mercenaries ability)
 ED9F22A6,Natalie Seline (mercenaries)
 5C414C2E,Benediction (mercenaries ability)
 CE96C8CA,Imp-losion (mercenaries ability)
-06A705D7,Nemsy Necrofizzle (mercenaries)
-19169B9C,Nemsy Necrofizzle (mercenaries golden)
-BE7E6F4E,Nemsy Necrofizzle (mercenaries)
-2AD211AE,Nemsy Necrofizzle (mercenaries golden)
+06A705D7,Nemsy Necrofizzle (mercenaries 1)
+19169B9C,Nemsy Necrofizzle (mercenaries golden 1)
+BE7E6F4E,Nemsy Necrofizzle (mercenaries 2)
+2AD211AE,Nemsy Necrofizzle (mercenaries golden 2)
 D0740684,Boggy Blast (mercenaries ability)
 B621BBCD,Bognomics (mercenaries ability)
 59E8DE6D,Deep Breath (mercenaries ability)
 C8DAC635,Spawn of N'Zoth (mercenaries ability)
 ED217AFF,Eye Matey (mercenaries ability)
 C7346D27,Velen's Blessing (mercenaries ability)
-0125EF66,Queen Azshara (mercenaries golden)
-3F03287B,Queen Azshara (mercenaries golden)
+0125EF66,Queen Azshara (mercenaries golden 1)
+3F03287B,Queen Azshara (mercenaries golden 2)
 052252B9,Shifting Tides (mercenaries ability)
 CC6FF752,Shadow Bolt (mercenaries ability)
 7330E9EC,Varden Dawngrasp (mercenaries)
@@ -1119,10 +1115,7 @@ F1455557,Resurrection (mercenaries ability)
 7B3593B3,"Inge, the Iron Hymn (avatar)"
 88BC4F1E,"Inge, the Iron Hymn (avatar splash)"
 D37D5FD2,Shapeshift (hero power)
-361DA125,Graveyard Shift (golden)
 65791A91,Hammer of Wrath (golden)
-EFB7EFB3,Prophet Velen
-803A8FC9,Eviserate
 476E8FF2,Assassin's Blade
 2EE37C92,Demonfire
 0D0549C2,Heroic Strike
@@ -1143,7 +1136,6 @@ D3C0B696,Tentacle of N'Zoth
 C3FA1568,Doomed Apprentice
 D67EBEDA,Emerald Spellstone (token)
 146390A2,Greater Emerald Spellstone (token)
-E936C762,Psionic Prone
 59365B0A,Sudden Betrayal
 3E2A5243,Master Chest (token)
 483EF43F,Mecharoo
@@ -1156,11 +1148,8 @@ B41F75E4,Netherwind Portal
 4BB3DB27,Aldor Attendant
 FFE7E552,Rocket Augmerchant
 B7C049E8,Imprisoned Vilefiend
-BF16EDBD,Moontouched Amulet (upgraded)
-50FD0C16,Moontouched Amulet (golden upgraded)
 9900EB78,Oh My Yogg!
 D9166102,Guidance
-73E94A3F,Horrendous Growth (upgraded)
 F0DC787F,Against All Odds
 F6D935FA,Unstable Shadow Blast
 01839A58,Command the Elements (hero power)
@@ -1168,8 +1157,6 @@ F6D935FA,Unstable Shadow Blast
 D19D9544,Harpoon Gun
 636962E3,Scalding Geyser
 FF1E9664,Cathedral of Atonement
-E3D1222B,Convincing Disguise (upgraded)
-F8C5081B,Totemic Evidence (upgraded)
 D9A16EDA,Crud Caretaker
 AA2574EA,Lingering Zombie
 2CB20B65,Disarmed Zombie (token)
@@ -1181,8 +1168,8 @@ AA2574EA,Lingering Zombie
 67BF3A2B,Crescendo
 EE190E0D,Chorus Riff
 6B17B7B9,Blood Plague (token)
-5803B82E,Blood Plague (golden token)
-1A79CD41,Blood Plague (golden token)
+5803B82E,Blood Plague (golden token 1)
+1A79CD41,Blood Plague (golden token 2)
 3CCCC95B,Frost Plague (token)
 5F771D7E,Frost Plague (golden token)
 ACBB0025,Unholy Plague (token)
@@ -1216,14 +1203,14 @@ BDFEFFC8,Angry Helhound
 7BDD307D,Fate Splitter (golden)
 EB3E2825,Mechagnome Guide
 0E62876D,Mechagnome Guide (upgraded)
-C20A0EFA,Queen Waggtoggle (adventure avatar)
+C20A0EFA,Queen Waggtoggle (adventure/battlegrounds avatar)
 4BE2FC03,Motivate (adventure hero power)
 0BC3A0B3,Hematology (duels hero power)
 C08210D6,Connections (duels hero power)
 E10125D7,Green Tortollan Shell (duels)
 818825FF,Blood Moon (duels)
 127770BC,Haunted Curio (duels token)
-34BBAAE9,Weeping Ghost (duels token)
+34BBAAE9,Weeping Ghost (duels token 2)
 C078290B,Enrage (duels)
 CC853E0E,Mulch Madness (duels)
 D4649ABD,Recycling (duels)
@@ -1231,14 +1218,3 @@ D4649ABD,Recycling (duels)
 618CB77A,Supercharge (duels)
 2401BEBE,Crack the Case (battlegrounds)
 1F269542,Essence of Zerus (battlegrounds)
-AF5159D7,Tidemistress Athissa (golden mercenaries)
-9D5B8626,Elise Starseeker (golden mercenaries)
-AB3AB5C4,Elise Starseeker (golden mercenaries)
-92245A5E,Elise Starseeker (golden mercenaries)
-9A32C439,Lady Vashj (golden mercenaries)
-19169B9C,Nemsy Necrofizzle (golden mercenaries)
-2AD211AE,Nemsy Necrofizzle (golden mercenaries)
-0125EF66,Queen Azshara (golden mercenaries)
-3F03287B,Queen Azshara (golden mercenaries)
-2E5557E5,Varden Dawngrasp (golden mercenaries)
-FB725AE4,Zar'jira the Sea Witch (golden mercenaries)

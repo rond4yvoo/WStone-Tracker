@@ -66,15 +66,17 @@ class MainWindow:
             try:
                 self.mapping_df = pd.read_csv(self.mapping_df_path)
             except ValueError:
-                self.mapping_df = pd.DataFrame()
+                messagebox.showwarning('Warning', 'FullTextureList.csv cannot be found, or does not have the right format.')
+                pd.DataFrame(columns=['hex', 'id'])
         else:
-            self.mapping_df = pd.DataFrame()
+            messagebox.showwarning('Warning', 'FullTextureList.csv cannot be found, or does not have the right format.')
+            pd.DataFrame(columns=['hex', 'id'])
         
         if 'tex_dir' in self.data:
             self.load_folderpath(self.data['tex_dir'])
         else:
             self.data['tex_dir'] = ''
-            self.tex_df = pd.DataFrame()
+            self.tex_df = pd.DataFrame(columns=['tex_relpath', 'tex_hex', 'tex_id'])
     
         if 'options' not in self.data:
             self.data['options'] = {}
@@ -282,6 +284,14 @@ class MainWindow:
         self.reload()
     
     def remap(self):
+        duplicate_hex_rows = self.mapping_df[self.mapping_df.duplicated(['hex'])]
+        duplicate_id_rows = self.mapping_df[self.mapping_df.duplicated(['id'])]
+        if duplicate_id_rows.size > 0 or duplicate_hex_rows.size > 0:
+            print(duplicate_id_rows)
+            print(duplicate_hex_rows)
+            messagebox.showerror('Error', 'Error: Duplicate IDs or hex codes found in FullTextureList.csv.')
+            return
+
         messagebox.showinfo('Information', 'Select mapping .csv file.')
         remap_file = filedialog.askopenfilename(filetypes =[('CSV files', '*.csv')])
         new_mapping_df = pd.DataFrame()
@@ -325,12 +335,12 @@ class MainWindow:
             # Outside of widget.
             return
 
-        self.menu = tk.Menu(tearoff=0)
-        self.menu.add_command(label='Change ID', command=self.right_click_change_id)
-        self.menu.add_command(label='Change Hex Code', command=self.right_click_change_hex)
-        self.menu.add_command(label='Delete Entry', command=self.right_click_delete_entry)
-        self.menu.tk_popup(evt.x_root, evt.y_root, 0)
-        self.menu.grab_release()
+        menu = tk.Menu(tearoff=0)
+        menu.add_command(label='Change ID', command=self.right_click_change_id)
+        menu.add_command(label='Change Hex Code', command=self.right_click_change_hex)
+        menu.add_command(label='Delete Entry', command=self.right_click_delete_entry)
+        menu.tk_popup(evt.x_root, evt.y_root, 0)
+        menu.grab_release()
 
         self.right_click_waitvar = tk.IntVar()
         self.right_click_stringvar = tk.StringVar()
