@@ -50,10 +50,6 @@ Go to `File > Open Texture Directory...` and choose the `inject` directory in yo
 
 Visually displays all .dds textures files in your `inject` directory of choice. Also saves the location of all current .dds files in a JSON file.
 
-## Right-Click Context Menu
-
-Right-click any file within the file display to show a context menu. From there, you can change the ID or hex code of an entry, or delete the file altogether.
-
 ## ID Association
 
 Associates each texture file with an ID, usually card name, for searching and remapping.

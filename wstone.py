@@ -16,8 +16,8 @@ class MainWindow:
     #   data_path is the path to data.json
     #   texdirname is a StringVar which copies data['tex_dir']
     #   texidname is a StringVar, the id of the current texture from mapping_df
-    #   mapping_df is a dataframe derived from FullTextureList.csv
-    #   mapping_df_path is the path to FullTextureList.csv
+    #   mapping_df is a dataframe derived from final.csv
+    #   mapping_df_path is the path to final.csv
     #   tex_df is a dataframe which contains:
     #       tex_relpath - relative path of .dds file
     #       tex_hex - isolated hex code of .dds file
@@ -33,7 +33,7 @@ class MainWindow:
         self.root.grid_rowconfigure(0, weight=1)
         self.root.grid_columnconfigure(0, weight=1)
 
-        self.mapping_df_path = os.path.join(sys.path[0], 'FullTextureList.csv')
+        self.mapping_df_path = os.path.join(sys.path[0], 'csv', 'final.csv')
         self.data_path = os.path.join(sys.path[0], 'data.json')
 
         self.texdirname = StringVar()
@@ -66,10 +66,10 @@ class MainWindow:
             try:
                 self.mapping_df = pd.read_csv(self.mapping_df_path)
             except ValueError:
-                messagebox.showwarning('Warning', 'FullTextureList.csv cannot be found, or does not have the right format.')
+                messagebox.showwarning('Warning', 'final.csv cannot be found, or does not have the right format.')
                 pd.DataFrame(columns=['hex', 'id'])
         else:
-            messagebox.showwarning('Warning', 'FullTextureList.csv cannot be found, or does not have the right format.')
+            messagebox.showwarning('Warning', 'final.csv cannot be found, or does not have the right format.')
             pd.DataFrame(columns=['hex', 'id'])
         
         if 'tex_dir' in self.data:
@@ -92,7 +92,7 @@ class MainWindow:
 
         for hx in tex_hex:
             try:
-                tex_id.append(self.mapping_df.loc[self.mapping_df['hex'] == hx]['id'].values[0])
+                tex_id.append(self.mapping_df.loc[self.mapping_df['texhash'] == hx]['cardname'].values[0])
             except (KeyError, IndexError) as e:
                 tex_id.append(None)
         
@@ -163,7 +163,7 @@ class MainWindow:
         listscrollbar.config(command = self.listbox.yview)
 
         aqua = self.root.tk.call('tk', 'windowingsystem') == 'aqua'
-        self.listbox.bind('<2>' if aqua else '<3>', self.on_right_click)
+        # self.listbox.bind('<2>' if aqua else '<3>', self.on_right_click)
 
         try:
             for img in self.tex_df['tex_hex']:
@@ -284,18 +284,9 @@ class MainWindow:
         self.reload()
     
     def remap(self):
-        duplicate_hex_rows = self.mapping_df[self.mapping_df.duplicated(['hex'])]
-        duplicate_id_rows = self.mapping_df[self.mapping_df.duplicated(['id'])]
-        if duplicate_id_rows.size > 0 or duplicate_hex_rows.size > 0:
-            print(duplicate_id_rows)
-            print(duplicate_hex_rows)
-            messagebox.showerror('Error', 'Error: Duplicate IDs or hex codes found in FullTextureList.csv.')
-            return
-
         messagebox.showinfo('Information', 'Select mapping .csv file.')
         remap_file = filedialog.askopenfilename(filetypes =[('CSV files', '*.csv')])
         new_mapping_df = pd.DataFrame()
-        new_mapping_dict = {}
 
         if not remap_file or not os.path.exists(remap_file):
             messagebox.showerror('Error', 'Invalid .csv file.')
@@ -303,14 +294,15 @@ class MainWindow:
         
         try:
             new_mapping_df = pd.read_csv(remap_file)
-            new_mapping_dict = new_mapping_df.set_index('id').to_dict()
+            self.mapping_df.rename(columns={"texhash": "old_texhash"})
         except (pd.errors.EmptyDataError, pd.errors.ParserError, KeyError) as e:
             messagebox.showerror('Error', 'Invalid .csv file.')
             return
         
         try:
+            merged_df = new_mapping_df.merge(self.mapping_df, how='left', on=['guid', 'cardname', 'texname'])
+            new_mapping_dict = pd.Series(merged_df['texhash'].values,index=merged_df['old_texhash']).to_dict()
             self.tex_df['tex_hex'] = self.tex_df['tex_id'].map(new_mapping_dict).fillna(self.tex_df['tex_hex'])
-            self.mapping_df['hex'] = self.mapping_df['id'].map(new_mapping_dict).fillna(self.mapping_df['hex'])
 
             for index, row in self.tex_df.iterrows():
                 new_relpath = os.path.join(os.path.dirname(row['tex_relpath']), row['tex_hex'] + '.dds')
@@ -318,8 +310,7 @@ class MainWindow:
         except KeyError:
             pass
 
-        combined_mapping_df = pd.concat([self.mapping_df, new_mapping_df], ignore_index=True, sort=False).drop_duplicates(keep='first')
-        combined_mapping_df.to_csv(self.mapping_df_path, index=False)
+        new_mapping_df.to_csv(self.mapping_df_path, index=False)
         self.reload()
 
     def on_right_click(self, evt):
@@ -336,9 +327,6 @@ class MainWindow:
             return
 
         menu = tk.Menu(tearoff=0)
-        menu.add_command(label='Change ID', command=self.right_click_change_id)
-        menu.add_command(label='Change Hex Code', command=self.right_click_change_hex)
-        menu.add_command(label='Delete Entry', command=self.right_click_delete_entry)
         menu.tk_popup(evt.x_root, evt.y_root, 0)
         menu.grab_release()
 
@@ -372,23 +360,6 @@ class MainWindow:
             return self.right_click_stringvar.get()
         else:
             return None
-    
-    def right_click_change_id(self):
-        curr_hex = self.tex_search_df['tex_hex'][self.right_click_index]
-        curr_id = self.tex_search_df['tex_id'][self.right_click_index]
-
-        output = self.right_click_draw('Enter new ID.', curr_id)
-
-        if output:
-            try:
-                search_index = self.mapping_df.loc[(self.mapping_df['hex'] == curr_hex) & (self.mapping_df['id'] == curr_id)].index[0]
-                self.mapping_df['id'][search_index] = output
-            except IndexError:
-                new_row = pd.DataFrame([{'hex':curr_hex, 'id':output}])
-                self.mapping_df = pd.concat([self.mapping_df, new_row], ignore_index=True)
-            
-            self.mapping_df.to_csv(self.mapping_df_path, index=False)
-            self.reload()
             
     def right_click_change_hex(self):
         curr_relpath = self.tex_search_df['tex_relpath'][self.right_click_index]
@@ -589,4 +560,8 @@ class DupeWindow:
             pady=5
         )
 
-main = MainWindow()
+def main():
+    main = MainWindow()
+
+if __name__ == "__main__":
+    main()
