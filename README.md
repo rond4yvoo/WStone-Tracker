@@ -1,4 +1,4 @@
-Whorestone Tracker is a Python script used to manage .dds files used for Hearthstone modding with SpecialK.
+WStone Tracker is a Python script used to manage .dds files used for Hearthstone modding with SpecialK.
 
 # Getting Started
 
@@ -62,7 +62,7 @@ Search .dds file with regex. Matches either hex code or ID.
 
 Find duplicate .dds files in separate directories and pick one to keep.
 
-> WARNING: Whorestone Tracker is still under development and is not full tested. Any files deleted by the duplicate remover cannot be recovered afterwards. Consider making a backup before using this feature.
+> WARNING: WStone Tracker is still under development and is not full tested. Any files deleted by the duplicate remover cannot be recovered afterwards. Consider making a backup before using this feature.
 
 ## Remapping
 
