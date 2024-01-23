@@ -1110,7 +1110,8 @@ BG20_HERO_201e3,72448,Stats Set DEPRECATED
 BG20_HERO_201p,71464,Spirit Swap
 BG20_HERO_201p2,71644,Spirit Swap
 BG20_HERO_201p2e,72192,Spirit Swapped
-BG20_HERO_201p3e,71653,Marked for Swap
+BG20_HERO_201p2e2,109318,Spirit Gained
+BG20_HERO_201p3e,71653,Marked for Gain
 BG20_HERO_202,71908,Master Nguyen
 BG20_HERO_202_Buddy,77514,Lei Flamepaw
 BG20_HERO_202_Buddy_G,77550,Lei Flamepaw
@@ -1137,6 +1138,7 @@ BG20_HERO_280_SKIN_A,83634,Suede Kurtrus
 BG20_HERO_280_SKIN_B2,94529,Ashfallen Firewalker
 BG20_HERO_280_SKIN_C3,94875,The Honorable Ashfallen
 BG20_HERO_280_SKIN_D,96564,Mrrrtrus Ashfallen
+BG20_HERO_280_SKIN_E,106628,Gunglaive Kurtrus
 BG20_HERO_280e,77255,Kurtrus Watcher
 BG20_HERO_280p,74632,Final Showdown
 BG20_HERO_280p2,74635,Gain Momentum
@@ -1153,6 +1155,7 @@ BG20_HERO_282_Buddye,79308,Consumed
 BG20_HERO_282_SKIN_A,83633,Ballroom Tamsin
 BG20_HERO_282_SKIN_B,92194,Dancin' Tamsin
 BG20_HERO_282_SKIN_C4,95316,"Tamsin, Shadow Mage"
+BG20_HERO_282_SKIN_D,107784,Treason Tamsin
 BG20_HERO_282p,77911,Fragrant Phylactery
 BG20_HERO_282pe,77912,Fragrant
 BG20_HERO_283,75702,Galewing
@@ -1162,6 +1165,7 @@ BG20_HERO_283_SKIN_A,82391,Starblast Galewing
 BG20_HERO_283_SKIN_B2,94525,Galewing of Fire
 BG20_HERO_283_SKIN_C3,94871,Gravewing Galewing
 BG20_HERO_283_SKIN_D4,95312,Sky Sailor Galewing
+BG20_HERO_283_SKIN_E,111065,Lantern Stringer Galewing
 BG20_HERO_283p,75703,Dungar's Gryphon
 BG20_HERO_283p_t1,75704,Westfall
 BG20_HERO_283p_t1e,75889,Westfall
@@ -1180,6 +1184,10 @@ BG20_HERO_301p,71914,Devour
 BG20_HERO_301pe,71915,Spat Upon
 BG20_HERO_666,72470,Diablo
 BG20_HERO_666p,72471,Realm of Terror
+BG20_HERO_666p2,105634,Soulstone
+BG20_HERO_666p2e,105636,Soulstone
+BG20_HERO_666p2e2,105861,Soulstone Watcher
+BG20_HERO_666p2e3,105862,Soulstone
 BG20_HERO_666p_t0,78109,"Diablo, Lord of Terror"
 BG20_HERO_666p_t1a,77435,Sigil of Hell
 BG20_HERO_666p_t1b,77436,Magic Sigil of Hell
@@ -1271,7 +1279,7 @@ BG21_019_G,73504,Nosy Looter
 BG21_020,72068,Dazzling Lightspawn
 BG21_020_G,74938,Dazzling Lightspawn
 BG21_020e,74935,Dazzled
-BG21_020pe,74936,Dazzling Lightspawn Player Enchant
+BG21_020pe,74936,Dazzling Lightspawn Player Enchant (DNT)
 BG21_021,72069,Smogger
 BG21_021_G,74898,Smogger
 BG21_021e,74896,Smogged
@@ -1346,6 +1354,7 @@ BG21_HERO_020_Buddy_G,77873,Sous Chef
 BG21_HERO_020_SKIN_A2,94522,S'more-master Cookie
 BG21_HERO_020_SKIN_B,97920,Feastmaster Cookie
 BG21_HERO_020_SKIN_C,106654,"""Y'Shaarj"" Cookie"
+BG21_HERO_020_SKIN_D,111060,Dumpling Chef Cookie
 BG21_HERO_020p,77434,Stir the Pot
 BG21_HERO_030,76521,Sneed
 BG21_HERO_030_Buddy,77874,Piloted Whirl-O-Tron
@@ -1388,6 +1397,7 @@ BG22_HERO_000_Buddy_G,77881,Crabby
 BG22_HERO_000_Buddy_e,80872,Crabby
 BG22_HERO_000_SKIN_A,98808,Scoutmaster Tavish
 BG22_HERO_000_SKIN_B,102858,Tavernwave Tavish
+BG22_HERO_000_SKIN_C,106629,Long-shot Tavish
 BG22_HERO_000p,77990,Deadeye
 BG22_HERO_000p_t1,77991,Aim Left!
 BG22_HERO_000p_t2,77992,Aim Low!
@@ -1423,10 +1433,11 @@ BG22_HERO_002_Buddy,77884,Frostwolf Lieutenant
 BG22_HERO_002_Buddy_G,77885,Frostwolf Lieutenant
 BG22_HERO_002_Buddy_Ge,80636,Lieutenant's Leadership
 BG22_HERO_002_Buddy_e,80635,Lieutenant's Leadership
-BG22_HERO_002_Buddye,101502,Frostwolf Player Enchant
+BG22_HERO_002_Buddye,101502,Frostwolf Player Enchant (DNT)
 BG22_HERO_002_SKIN_A,92195,Disco Drek'thar
 BG22_HERO_002_SKIN_B,98789,Scourgewolf Drek'thar
 BG22_HERO_002_SKIN_C,103811,Challenger Drek'thar
+BG22_HERO_002_SKIN_D,106632,Brigand Drek'thar
 BG22_HERO_002e,101592,Lieutenant's Leadership
 BG22_HERO_002p,80244,Lead the Frostwolves
 BG22_HERO_002pe,80245,Frostwolf Fervor
@@ -1437,9 +1448,10 @@ BG22_HERO_003_Buddy,77886,Stormpike Lieutenant
 BG22_HERO_003_Buddy_G,77887,Stormpike Lieutenant
 BG22_HERO_003_Buddy_Ge,80639,Lieutenant's Leadership
 BG22_HERO_003_Buddy_e,80637,Lieutenant's Leadership
-BG22_HERO_003_Buddye,101504,Stormpike Player Enchant
+BG22_HERO_003_Buddye,101504,Stormpike Player Enchant (DNT)
 BG22_HERO_003_SKIN_A,98809,Commander Vanndar
 BG22_HERO_003_SKIN_B,102862,Vanndar Stormpipes
+BG22_HERO_003_SKIN_C,106635,Deputy Vanndar
 BG22_HERO_003e,101593,Lieutenant's Leadership
 BG22_HERO_003p,80248,Lead the Stormpikes
 BG22_HERO_003pe,80246,Stormpike Strength
@@ -1452,6 +1464,7 @@ BG22_HERO_004_Buddy_e2,86058,Frosted
 BG22_HERO_004_SKIN_A,89704,Dawn Guardian Varden
 BG22_HERO_004_SKIN_B,98812,Magister Dawngrasp
 BG22_HERO_004_SKIN_C,103819,Val'kyr Varden
+BG22_HERO_004_SKIN_D,106627,Azerite Varden
 BG22_HERO_004p,80539,Twice as Nice
 BG22_HERO_007,79618,Queen Azshara
 BG22_HERO_007_Buddy,77894,Imperial Defender
@@ -1618,6 +1631,7 @@ BG23_HERO_303,84867,Murloc Holmes
 BG23_HERO_303_Buddy,98656,Watfin
 BG23_HERO_303_Buddy_G,98659,Watfin
 BG23_HERO_303_SKIN_A,103807,Philosopher Holmes
+BG23_HERO_303_SKIN_B,107780,Sheriff Holmes
 BG23_HERO_303p2,90403,Detective for Hire
 BG23_HERO_303pt,92974,No Minions
 BG23_HERO_304,85125,Lady Vashj
@@ -1634,6 +1648,7 @@ BG23_HERO_305_Buddy_G,98651,"Waxadred, the Drippy"
 BG23_HERO_305_SKIN_A,102919,Bookbaron Togwaggle
 BG23_HERO_305_SKIN_B,103800,Sparkhoarder Togwaggle
 BG23_HERO_305_SKIN_C,104420,"Togwaggle, Archlich"
+BG23_HERO_305_SKIN_D,107783,Safecracker Togwaggle
 BG23_HERO_305p,86292,The Perfect Crime
 BG23_HERO_306,89293,Sylvanas Windrunner
 BG23_HERO_306_Buddy,98660,Nathanos Blightcaller
@@ -1712,6 +1727,7 @@ BG24_HERO_100_Buddy_Gt,101580,Hefty Coin Pouch
 BG24_HERO_100_Buddyt,101579,Coin Pouch
 BG24_HERO_100_SKIN_A,102494,Sire Melodious
 BG24_HERO_100_SKIN_B,103820,Chariot Driver Denathrius
+BG24_HERO_100_SKIN_C,105063,Kingpin Denathrius
 BG24_HERO_100p,92961,Whodunit?
 BG24_HERO_204,96870,Enhance-o Mechano
 BG24_HERO_204_Buddy,101973,Enhance-o Medico
@@ -1890,7 +1906,7 @@ BG25_040_Ge,100232,Blaze of Glory
 BG25_040e,100231,Blaze of Glory
 BG25_041,97553,Felemental
 BG25_041_G,97554,Felemental
-BG25_041e,100289,Felfire Player Enchant
+BG25_041e,100289,Felfire Player Enchant (DNT)
 BG25_041e2,100290,Felementality
 BG25_042,97555,Felstomper
 BG25_042_G,97556,Felstomper
@@ -1960,6 +1976,7 @@ BG25_922e,101571,Fireworked
 BG25_HERO_100,97813,Professor Putricide
 BG25_HERO_100_Buddy,101442,Festergut
 BG25_HERO_100_Buddy_G,101443,Festergut
+BG25_HERO_100_SKIN_A,107781,Oil Baron Putricide
 BG25_HERO_100p,97814,Build-An-Undead
 BG25_HERO_100pt,97817,Putricide's Creation
 BG25_HERO_103,98726,Teron Gorefiend
@@ -1968,12 +1985,14 @@ BG25_HERO_103_Buddy_G,101460,Shadowy Construct
 BG25_HERO_103_Buddy_Ge,101934,From the Shadows
 BG25_HERO_103_Buddye,101933,From the Shadows
 BG25_HERO_103_SKIN_A,103826,Ferryman Teron
+BG25_HERO_103_SKIN_B,106630,Cowboy Teron
 BG25_HERO_103p,98728,Rapid Reanimation
 BG25_HERO_103pe,98778,Impending Death
 BG25_HERO_105,101345,"E.T.C., Band Manager"
 BG25_HERO_105_Buddy,101349,Talent Scout
 BG25_HERO_105_Buddy_G,101350,Talent Scout
 BG25_HERO_105_SKIN_A,103799,Burning Tauren Chieftain
+BG25_HERO_105_SKIN_C,111062,"E.T.C., Dragon Dancer"
 BG25_HERO_105p,101346,Sign a New Artist
 BG26_001,101144,Fairy Tale Caroler
 BG26_001_G,101145,Fairy Tale Caroler
@@ -2021,13 +2040,13 @@ BG26_157,100997,Bristlebach
 BG26_157_G,100999,Bristlebach
 BG26_159,98930,Moon-Bacon Jazzer
 BG26_159_G,98934,Moon-Bacon Jazzer
-BG26_159pe,102367,Blood Gem Player Enchant
+BG26_159pe,102367,Blood Gem Player Enchant (DNT)
 BG26_160,98946,Prickly Piper
 BG26_160_G,98947,Prickly Piper
 BG26_162,99523,Dancing Barnstormer
 BG26_162_G,99734,Dancing Barnstormer
 BG26_162e,99732,Barnstormed
-BG26_162pe,99733,Dancing Barnstormer Player Enchant [DNT]
+BG26_162pe,99733,Dancing Barnstormer Player Enchant (DNT)
 BG26_171,100138,Silent Swimmer
 BG26_171_G,100141,Silent Swimmer
 BG26_171_Ge,101274,Just Keep Swimming
@@ -2166,6 +2185,8 @@ BG26_817,99035,Blade Collector
 BG26_817_G,99036,Blade Collector
 BG26_888,101316,Operatic Belcher
 BG26_888_G,101317,Operatic Belcher
+BG26_921,100104,Worgen Vigilante
+BG26_921_G,100105,Worgen Vigilante
 BG26_963,100026,Electric Synthesizer
 BG26_963_G,100029,Electric Synthesizer
 BG26_963_Ge,100031,Synthesized
@@ -2364,7 +2385,7 @@ BG27_Anomaly_000,101954,Money Match
 BG27_Anomaly_001,101959,Finicky Hourglass
 BG27_Anomaly_002,101986,Prudence of Amitus
 BG27_Anomaly_004,101991,Anti-Gravity Stadium
-BG27_Anomaly_004_e,106322,Anti-Gravity Enchant
+BG27_Anomaly_004_e,106322,Valuation Inflation Enchant [DNT]
 BG27_Anomaly_004_e1,106321,Anomaly Swap Attack Health
 BG27_Anomaly_005,101992,Mimiron's Clockwork Stadium
 BG27_Anomaly_006,101994,Curse of Aggramar
@@ -2459,8 +2480,11 @@ BG27_Anomaly_Prizes,106695,Darkmoon Prizes
 BG27_Anomaly_Quests,106694,Quests
 BG27_HERO_801,103477,"Thorim, Stormlord"
 BG27_HERO_801_SKIN_A,103823,Emperor Thorim
+BG27_HERO_801_SKIN_D,110629,Greatfather Thorim
+BG27_HERO_801p,103480,Thorim's Champion
 BG27_HERO_801p2,104628,Choose Your Champion
 BG27_HERO_801p2e,104629,Unplayable
+BG27_HERO_801pe3,105713,Thorim Watcher
 BG27_Quest_800,104658,Burn the Evidence
 BG27_Quest_801,104661,Pressure the Authorities
 BG27_Quest_802,104660,Round Up the Suspects
@@ -2489,8 +2513,164 @@ BG27_Reward_814e,104845,Transm-ogre-fied
 BG27_Reward_815,104842,Endless Blood Moon
 BG27_TTN_852_Ge,103538,Shielding
 BG27_TTN_852e,103537,Shielding
+BG28_168,109230,Shiny Ring
+BG28_168e,109231,"Ooh, Shiny!"
+BG28_169,109232,Azerite Empowerment
+BG28_169e,109233,Azerite Glow
+BG28_300,104551,Harmless Bonehead
+BG28_300_G,104554,Harmless Bonehead
+BG28_302,104607,Grave Gobbler
+BG28_302_G,104609,Grave Gobbler
+BG28_302_Ge,110151,Gobbling
+BG28_302e,104608,Gobbling
+BG28_303,104610,Disguised Graverobber
+BG28_303_G,104611,Disguised Graverobber
+BG28_304,104612,"Moroes, Steward of Death"
+BG28_304_G,104613,"Moroes, Steward of Death"
+BG28_304_Ge,110804,Steward's Duty
+BG28_304e,104614,Steward's Duty
+BG28_306,105440,Steadfast Spirit
+BG28_306_G,105443,Steadfast Spirit
+BG28_306_Ge,105442,Steadfast
+BG28_306e,105441,Steadfast
+BG28_308,105518,Archlich Kel'Thuzad
+BG28_308_G,105520,Archlich Kel'Thuzad
+BG28_309,108992,Mummifier
+BG28_309_G,109003,Mummifier
+BG28_309e,109004,Mummified
+BG28_402,105668,Beleaguered Battler
+BG28_402_G,105671,Beleaguered Battler
+BG28_402e,105670,Beleaguered
+BG28_403,105672,"Phaerix, Wrath of the Sun"
+BG28_403_G,105673,"Phaerix, Wrath of the Sun"
+BG28_403e,110059,Sunny Wrath
+BG28_404,105674,Mad Matador
+BG28_404_G,105675,Mad Matador
+BG28_405,105676,Silivaz the Vindictive
+BG28_405_G,105677,Silivaz the Vindictive
+BG28_405_Gt,105679,Sunken Spells
+BG28_405t,105678,Sunken Spells
+BG28_406,105680,Wayward Grimscale
+BG28_406_G,105681,Wayward Grimscale
+BG28_500,103785,Armor Stash
+BG28_503,103791,Fortify
+BG28_503e,104433,Fortification
+BG28_504,103793,Recruit a Trainee
+BG28_507,103796,Sacred Gift
+BG28_507e,110969,Sacred Gift
+BG28_509,104027,Brann's Blessing
+BG28_512,104502,Enchanted Lasso
+BG28_513,105635,Reckless Investment
+BG28_513e,105637,Lose Gold Next Turn [DNT]
+BG28_518,105664,Chef's Choice
+BG28_519,105665,Fleeting Vigor
+BG28_519e,105666,Strong But Fleeting
+BG28_520,105667,Tricky Trousers
+BG28_520e,106257,Tricky
+BG28_520e2,106258,Trousers On
+BG28_520e3,106259,Trousers Off
+BG28_521,105669,Planar Telescope
+BG28_550,104466,Rodeo Performer
+BG28_550_G,104467,Rodeo Performer
+BG28_551,104468,Nalaa the Redeemer
+BG28_551_G,104471,Nalaa the Redeemer
+BG28_551te,104592,Redeemed
+BG28_551te2,106164,Redeemed
+BG28_555,104504,Ensorcelled Fungus
+BG28_555_G,104508,Ensorcelled Fungus
+BG28_555e,104506,Ensorcelled
+BG28_556,104532,Land Lubber
+BG28_556_G,104533,Land Lubber
+BG28_571,104559,Hasty Excavation
+BG28_573,104560,Upper Hand
+BG28_573e,109264,Caught Off Guard
+BG28_582,104764,Mangled Bandit
+BG28_582_G,104765,Mangled Bandit
+BG28_583,104766,Geomagus Roogug
+BG28_583_G,104767,Geomagus Roogug
+BG28_584,104768,Paint Smudger
+BG28_584_G,104769,Paint Smudger
+BG28_585,104770,Snarling Conductor
+BG28_585_G,104771,Snarling Conductor
+BG28_590,105523,Emerald Proto-Whelp
+BG28_590_G,105529,Emerald Proto-Whelp
+BG28_590_Ge,110149,Proto Power
+BG28_590e,105527,Proto Power
+BG28_592,105550,Outback Smolderer
+BG28_592_G,105554,Outback Smolderer
+BG28_593,105533,Bronze Sandspewer
+BG28_593_G,105537,Bronze Sandspewer
+BG28_593_Ge,110150,Sandspewing
+BG28_593e,105535,Sandspewing
+BG28_595,105852,Ignition Specialist
+BG28_595_G,105853,Ignition Specialist
+BG28_597,109317,Sandstone Drake
+BG28_597_G,109319,Sandstone Drake
+BG28_597_Ge,109327,Stone Scales
+BG28_597e,109320,Stone Scales
+BG28_707,107939,Living Azerite
+BG28_707_G,107940,Living Azerite
+BG28_707e,107941,Living Azerite Player Enchant (DNT)
+BG28_707e2,107942,Azerite Empowerment
+BG28_800,103779,Careful Investment
+BG28_805,104029,Strike Oil
+BG28_810,104436,Tavern Coin
+BG28_812,104438,Ritual of Growth
+BG28_814,104440,Echoing Roar
+BG28_814e,110802,Echoing Roar
+BG28_814e2,111535,Echoed Roar
+BG28_825,104445,Defender's Rites
+BG28_825e,105633,Stop Rite There!
+BG28_827,104446,Leaf Through the Pages
+BG28_830,104448,Golden Touch
+BG28_838,104601,Perfect Vision
+BG28_838e,110539,Hindsight
+BG28_843,104461,Titus' Tribute
+BG28_843e,104463,Titus' Tribute Player Enchant (DNT)
+BG28_845,104472,Natural Blessing
+BG28_845e,104474,It's Minion Nature
+BG28_849,104494,Saloon's Finest
+BG28_870,104534,Jaws of Fate
+BG28_871,104535,Buddy Up
+BG28_882,105265,Contracted Corpse
+BG28_883,105266,Dreamer's Embrace
+BG28_884,105267,Overconfidence
+BG28_884e,105268,Overconfident [DNT]
+BG28_885,105269,Lantern Light
+BG28_885e,105270,Lit Up
+BG28_886,105276,Staff of Enrichment
+BG28_886e2,109360,Staff of Enrichment Player Enchant (DNT)
+BG28_886e3,109362,Enriched
+BG28_888,105271,Misplaced Tea Set
+BG28_888e,105272,Spot of Tea
+BG28_897,105752,Tavern Dish Banana
+BG28_897e,110976,Dished Out
+BG28_900,104496,Mystic Sporebat
+BG28_900_G,104497,Mystic Sporebat
+BG28_901_Ge,105419,Evening
+BG28_901e,105284,Evening
+BG28_903,105424,Spellbound Seafarer
+BG28_903_G,105425,Spellbound Seafarer
 BG28_904,105428,Audacious Anchor
 BG28_904_G,105429,Audacious Anchor
+BG28_905,105697,Bazaar Dealer
+BG28_905_G,105702,Bazaar Dealer
+BG28_955,105905,Primal Staff
+BG28_955e,105906,Primal Staff Player Enchant (DNT)
+BG28_966,105903,Them Apples
+BG28_966e,105904,How Do You Like 'Em?
+BG28_967,106195,Trembling Trolley
+BG28_967_G,106196,Trembling Trolley
+BG28_968,106240,Lighter Fighter
+BG28_968_G,106241,Lighter Fighter
+BG28_GIL_836,105264,Hired Headhunter
+BG28_HERO_400,105314,Snake Eyes
+BG28_HERO_400p,105315,Lucky Roll
+BG28_HERO_400p2,105395,Lucky Roll
+BG28_HERO_800,105431,Tae'thelan Bloodwatcher
+BG28_HERO_800p,105432,Reliquary Research
+BG28_HERO_801,105434,Doctor Holli'dae
+BG28_HERO_801p,110472,Blessing of the Nine Frogs
 BGS_001,59186,Nathrezim Overseer
 BGS_001e,59187,Impish
 BGS_002,59660,Soul Juggler
@@ -2588,7 +2768,7 @@ BGS_100,63624,Lil' Rag
 BGS_100e,64075,Lil' Hand of Rag
 BGS_104,63626,"Nomi, Kitchen Nightmare"
 BGS_104e1,64168,Tavern Feast
-BGS_104pe,64167,Nomi Player Enchant
+BGS_104pe,64167,Nomi Player Enchant (DNT)
 BGS_105,63630,Majordomo Executus
 BGS_105e,65180,Aegis of the Firelord
 BGS_106,63614,Acolyte of C'Thun
@@ -2641,7 +2821,7 @@ BGS_Treasures_011,65249,Training Session
 BGS_Treasures_012,65250,On the House
 BGS_Treasures_013,65254,The Good Stuff
 BGS_Treasures_013e1,65252,Good Stuff
-BGS_Treasures_013pe,65251,The Good Stuff Player Enchant
+BGS_Treasures_013pe,65251,The Good Stuff Player Enchant (DNT)
 BGS_Treasures_014,65256,The Unlimited Coin
 BGS_Treasures_014e,65258,Unlimited Coin Return to Hand
 BGS_Treasures_015,65259,Buy the Holy Light
@@ -2652,7 +2832,7 @@ BGS_Treasures_019,65264,B.A.N.A.N.A.S.
 BGS_Treasures_020,65265,Top Shelf
 BGS_Treasures_022,65270,Friends and Family Discount
 BGS_Treasures_022e,65272,Discounted
-BGS_Treasures_022pe,65271,Friends and Family Discount Player Enchant
+BGS_Treasures_022pe,65271,Friends and Family Discount Player Enchant (DNT)
 BGS_Treasures_023,65277,Open Bar
 BGS_Treasures_023pe,65278,Refresh Cost 0
 BGS_Treasures_025,65274,Fresh Tab
@@ -2661,11 +2841,11 @@ BGS_Treasures_026e,65381,Bouncy Bouncy
 BGS_Treasures_028,66424,Give A Dog A Bone
 BGS_Treasures_028e,66426,Dog Bone
 BGS_Treasures_029,66427,Rocking and Rolling
-BGS_Treasures_030,66458,Brann's Blessing
-BGS_Treasures_030e,66493,Brann's Blessing
+BGS_Treasures_030,66458,Big Brann Play
+BGS_Treasures_030e,66493,Big Brann Play
 BGS_Treasures_032,66460,Big Winner!
 BGS_Treasures_033,66463,New Recruit
-BGS_Treasures_033e,66494,New Recruit
+BGS_Treasures_033e,66494,New Recruit Player Enchant (DNT)
 BGS_Treasures_034,66495,Repeat Customer
 BGS_Treasures_034e,66497,Repeat Customer
 BGS_Treasures_036,66545,Great Deal
@@ -2689,7 +2869,9 @@ BG_BOT_563_Ge,92972,Wargear
 BG_BOT_563e,92971,Wargear
 BG_BOT_606,96766,Kaboom Bot
 BG_BOT_911,96812,Annoy-o-Module
+BG_BOT_9112e,111187,Annoy-o-Module
 BG_BOT_911e,96813,Annoy-o-Module
+BG_BOT_911e2,111188,Annoy-o-Module
 BG_BRM_006t,96788,Imp
 BG_BT_010,96776,Felfin Navigator
 BG_BT_703t,103579,Cursed Shadow
@@ -3695,6 +3877,8 @@ BOTA_BOSS_20p1,52186,True Perfection
 BOTA_BOSS_20p2,52191,Fusion Core
 BOTA_BOSS_20p3,52192,Kadoom Bot
 BOTA_BOSS_20p4,52193,Death Ray
+BOTA_UNG_071,111090,Giant Mastodon
+BOTA_UNG_852,111082,Tyrantus
 BOT_020,47775,Skaterbot
 BOT_020e,47777,Skaterbot
 BOT_021,47781,Bronze Gatekeeper
@@ -5364,6 +5548,7 @@ CRED_118,54634,Keaton Gill
 CRED_12,1772,Rachelle Davis
 CRED_120,91253,Nathan Lyons-Smith
 CRED_122,91254,Benjamin Conner
+CRED_123,110475,Jim Nelson
 CRED_124,91255,Taylor Smith
 CRED_126,91256,Jay Axer
 CRED_127,91257,Tiffany Chiu
@@ -5399,6 +5584,7 @@ CRED_164,91282,Cameron Purchase
 CRED_165,91284,Eric Topf
 CRED_166,91285,Albert De Nova
 CRED_167,91286,Eric Dennis
+CRED_168,110501,Matt Browning
 CRED_169,91287,Evan Rogers
 CRED_17,1777,Rob Pardo
 CRED_172,91288,Bijan Beglari
@@ -5410,6 +5596,7 @@ CRED_178,91293,Mike Byrd
 CRED_179,91294,Sarah Chen
 CRED_18,3018,Becca Abel
 CRED_181,91295,Cody Childers
+CRED_182,110481,Oliver Chipping
 CRED_183,91296,Hunter Curren
 CRED_184,91297,Yi Deng
 CRED_186,91298,Jeff Shyy
@@ -5421,6 +5608,7 @@ CRED_190,91302,Russell Jahn
 CRED_191,91303,Kunal Kathuria
 CRED_192,91304,Petrina Koh
 CRED_193,91305,Evan Lawson
+CRED_194,110507,Will Lebus
 CRED_195,91306,Youngsik Lee
 CRED_196,91307,Christopher Leighton
 CRED_197,91308,Walt Mitchell
@@ -5432,6 +5620,8 @@ CRED_201,91312,John Okahata
 CRED_202,91313,David Perez
 CRED_203,91314,Nawar Rajab
 CRED_204,91315,"David Romig, Jr."
+CRED_205,110525,Valentina Velieva
+CRED_206,110535,Jhenna Foronda
 CRED_207,91316,Matt Stratford
 CRED_209,91317,Chris Wade
 CRED_21,3021,Bryan Chang
@@ -5452,6 +5642,7 @@ CRED_223,91330,Clifford Lasana
 CRED_224,91331,Casey Pitta
 CRED_225,91332,Kristen Quinn
 CRED_226,91333,Heidi Wagstaff
+CRED_229,110534,Dan Johnson
 CRED_23,3023,Christopher Yim
 CRED_232,91334,Matt Andersen
 CRED_234,91335,Sibyl Dong
@@ -5465,11 +5656,13 @@ CRED_249,91342,Mitchell Andersen
 CRED_25,3025,Elizabeth Cho
 CRED_251,91343,David Carlock
 CRED_254,91344,Casey Clay
+CRED_255,110486,Eric Dobbs
 CRED_256,91345,Daniel Duffin
 CRED_259,91346,Kory Heinichen
 CRED_26,3026,Eric Del Priore
 CRED_260,91347,Ron Hodge
 CRED_264,91348,Chris Nuzzo
+CRED_265,110529,Jonathan Reinhold
 CRED_266,91349,Jared Ritter
 CRED_269,91350,Neil Stephen Valdez
 CRED_27,3027,Henry Ho
@@ -5478,12 +5671,47 @@ CRED_273,93186,Ryan Kohler
 CRED_274,91352,Mike Mulen
 CRED_275,91353,Paul Walters
 CRED_276,91354,Andy Schott
+CRED_277,110484,Paw Larsen
 CRED_28,3028,He-Rim Woo
+CRED_281,110614,James Wright
+CRED_287,110514,Brenden Sewell
+CRED_288,110526,Jayson Kirby
+CRED_289,110511,Aleco Pors
 CRED_29,3029,Jason MacAllister
+CRED_292,110480,Jonathon Loucks
+CRED_293,110491,Jen Stacey
+CRED_295,110483,Sola Chang
+CRED_296,110536,Bexley Chevalier
+CRED_297,110530,Krista Leemhuis
+CRED_298,110509,Talent Pun
+CRED_299,110488,Maggie Gourlay
 CRED_30,3030,JC Park
+CRED_302,110479,Greg Haase
+CRED_303,110496,Dennis Pan
+CRED_304,110508,Tim Stanley
+CRED_307,110497,Mikyoung Choi
+CRED_308,110494,A'sa Dickens
 CRED_31,3031,Jeremy Cranford
+CRED_310,110477,Josiah Jordan
+CRED_311,110502,Zander Kandalaft
+CRED_312,110528,Daeuk Kang
+CRED_313,110489,Christopher Wang
+CRED_314,110495,Alan Marti
+CRED_315,110516,Olivia Lauletta
+CRED_319,110505,Nicole Zhou
 CRED_32,3032,Jerry Mascho
+CRED_322,110527,Kristofer Meyer-Ruef
+CRED_324,110493,Paul Chung
+CRED_325,110510,Mariel Garcia
+CRED_328,110518,Danielle Riggins
 CRED_33,3033,Jomaro Kindred
+CRED_330,110478,Irene Sizemore
+CRED_331,110532,Brandon Su
+CRED_333,110503,Trevor Marsano
+CRED_334,110522,Connor Swanson
+CRED_336,110531,Cynthia Park
+CRED_337,110487,Nicholas Weiss
+CRED_338,110533,Fabio Lo Zito
 CRED_34,3043,Max Ma
 CRED_35,3035,Max McCall
 CRED_36,3036,Mike Donais
@@ -5506,6 +5734,7 @@ CRED_52,45405,Alex Chapman
 CRED_53,45406,Camille Sanford
 CRED_54,45408,Hadidjah Chamberlin
 CRED_55,45409,Dave Kosak
+CRED_559,110492,Brian Kan
 CRED_56,45410,Dustin Escoffery
 CRED_57,45411,Matt Wyble
 CRED_58,45412,Jason Shattuck
@@ -5517,6 +5746,7 @@ CRED_63,45417,Evan Polekoff
 CRED_64,45418,Liv Breeden
 CRED_65,45419,Matt Place
 CRED_66,45420,Jason DeFord
+CRED_666,110504,Mitchell Loewen
 CRED_67,45421,Michael Skacal
 CRED_68,45422,Peter Whalen
 CRED_69,45423,Chris Belcher
@@ -5528,6 +5758,7 @@ CRED_74,45428,Drew Korfe
 CRED_75,45429,Steve Walker
 CRED_76,45430,Nicholas Kinney
 CRED_77,45431,Lorenzo Minaca
+CRED_777,110506,Nick Falcon
 CRED_78,45432,Matthew Grubb
 CRED_79,45433,Aaron Gutierrez
 CRED_80,45434,Derek Dupras
@@ -6657,6 +6888,70 @@ DED_524,65704,Multicaster
 DED_525,65705,"Goliath, Sneed's Masterpiece"
 DED_527,64197,Blacksmithing Hammer
 DED_527e,80585,Blacksmithing
+DEEP_000,102149,Summoning Ward
+DEEP_001,102151,Mismatched Fossils
+DEEP_001e,104522,"A ""New"" Species!"
+DEEP_002,102152,Elemental Companion
+DEEP_002t,102153,Hiffar
+DEEP_002t2,102154,Luekk
+DEEP_002t3,102155,Me'sho
+DEEP_002te,102156,Haffir
+DEEP_003,102158,Shimmer Shot
+DEEP_004,102160,Mantle Shaper
+DEEP_005,102161,Obsidian Revenant
+DEEP_006,102162,Stone Drake
+DEEP_007,102163,"Sir Finley, the Intrepid"
+DEEP_008,102172,Needlerock Totem
+DEEP_009,102173,Digging Straight Down
+DEEP_010,102175,Aftershocks
+DEEP_011,102249,Burning Heart
+DEEP_011e,105125,Heart of Fire
+DEEP_012,102250,Shadestone Skulker
+DEEP_012e,102251,"""Borrowed"""
+DEEP_013,102252,Fel Fissure
+DEEP_013t,105103,Fel Fissure
+DEEP_014,102254,Quick Pick
+DEEP_015,104524,Prosthetic Hand
+DEEP_015e,104525,Prosthetic Hand
+DEEP_016,104523,Quartzite Crusher
+DEEP_017,102418,Mining Casualties
+DEEP_017e,102420,Unfortunate Fate
+DEEP_018,104526,Shroomscavate
+DEEP_019,104530,Crimson Expanse
+DEEP_019e,104991,Crimson Containment
+DEEP_020,104528,Deepminer Brann
+DEEP_020e,104529,Deepmining
+DEEP_021,104537,Shadow Word: Steal
+DEEP_022,102421,Fool's Gold
+DEEP_023,102422,Hidden Gem
+DEEP_024,102424,Glowstone Gyreworm
+DEEP_024t,102425,Glowstone Gyreworm
+DEEP_025,102423,Shattered Reflections
+DEEP_026,102426,Pendant of Earth
+DEEP_027,102427,Gloomstone Guardian
+DEEP_027a,102428,Splintered Form
+DEEP_027b,102430,Mana Disintegration
+DEEP_027t,102431,Gloomstone Guardian
+DEEP_028,102432,Crystal Cluster
+DEEP_028t,102433,Crystal Crusher
+DEEP_029,102434,Trogg Gemtosser
+DEEP_030,102435,Elementium Geode
+DEEP_031,102443,Chaos Creation
+DEEP_032,102724,Soulfreeze
+DEEP_033,102728,Fossilized Kaleidosaur
+DEEP_034,102732,Shale Spider
+DEEP_035,102733,Iridescent Gyreworm
+DEEP_036,104573,Therazane
+DEEP_036e,104574,Earthmother's Boon
+DEEP_037,102741,Maruut Stonebinder
+DEEP_999t1,104576,Heartblossom
+DEEP_999t1e,104577,Heartblossom
+DEEP_999t2,104578,Deepholm Geode
+DEEP_999t3,104579,World Pillar Fragment
+DEEP_999t4,104581,The Azerite Dragon
+DEEP_999t4e,104582,Azerite Sheen
+DEEP_999t5,104584,The Azerite Murloc
+DEEP_999t5e,109427,Azerite Shimmer
 DFX_001,56407,Fast Spawn to Deck Dummy FX
 DFX_002,56410,Time Warp Dummy FX
 DFX_003,56430,Frost Nova Dummy FX
@@ -6848,6 +7143,7 @@ DMF_247,61269,Insatiable Felhound
 DMF_247e,67051,Corruption
 DMF_247t,61270,Insatiable Felhound
 DMF_248,61271,Felsteel Executioner
+DMF_248e,64003,Wicked Transformation
 DMF_248t,61272,Felsteel Executioner
 DMF_249,61273,Acrobatics
 DMF_249e,63537,Acrobatics
@@ -7422,6 +7718,10 @@ DS1h_292_H1_AT_132,30366,Ballista Shot
 DS1h_292_H2,57760,Steady Shot
 DS1h_292_H3,60336,Steady Shot
 DS1h_292_H3_AT_132,60596,Ballista Shot
+EBG_Spell_014,100596,Pointy Arrow
+EBG_Spell_014e,100597,Pointy
+EBG_Spell_037,100910,Unmasked Identity
+EBG_Spell_038,100911,Lost Staff of Hamuul
 ETC_026,87639,Guitar Soloist
 ETC_028,87642,Harmonica Soloist
 ETC_029,87648,Keyboard Soloist
@@ -9089,6 +9389,7 @@ HERO_01aj_Denathrius,107749,Saloon Denathrius
 HERO_01ak_ETC,107747,Touring E.T.C.
 HERO_01al_Garrosh,107736,Destroyer Garrosh
 HERO_01am_Garrosh,107737,Onslaught Garrosh
+HERO_01an_Deathwing,108415,Lunar Deathwing
 HERO_01b,57751,Corrupt Garrosh
 HERO_01bp,725,Armor Up!
 HERO_01bp2,2745,Tank Up!
@@ -9150,6 +9451,9 @@ HERO_02an,105083,Jade Lightning King
 HERO_02ao_Inzah,107738,Hoedown Inzah
 HERO_02ap_Thrall,107751,Cataclysm Thrall
 HERO_02aq_Thrall,107729,Skyshatter Thrall
+HERO_02ar_Disidra,108420,Disidra Stormglory
+HERO_02arhp,108421,Totemic Call
+HERO_02arhp2,108422,Totemic Slam
 HERO_02b,53237,King Rastakhan
 HERO_02bp,687,Totemic Call
 HERO_02bp2,2742,Totemic Slam
@@ -9194,6 +9498,7 @@ HERO_03afbp2,104928,Poisoned Daggers
 HERO_03ag,105069,Trapper Maiev
 HERO_03ah_Scabbs,107722,Campchef Scabbs
 HERO_03ai_Valeera,107748,Brawler Valeera
+HERO_03aj_Edwin,108383,Bandit Edwin
 HERO_03b,57755,Cap’n Valeera 
 HERO_03bp,730,Dagger Mastery
 HERO_03bp2,2743,Poisoned Daggers
@@ -9246,6 +9551,7 @@ HERO_04aj,106270,Chicken Leeroy
 HERO_04ak_Uther,107724,Frontiersman Uther
 HERO_04al_Uther,107735,Crystalforge Uther
 HERO_04am_Uther,107723,Lightbringer Uther
+HERO_04an_Liadrin,108385,Deputy Liadrin
 HERO_04b,46116,Prince Arthas
 HERO_04bp,472,Reinforce
 HERO_04bp2,2740,The Silver Hand
@@ -9290,6 +9596,8 @@ HERO_05ac,101676,Rockabilly Rexxar
 HERO_05ad,103770,Earthen Brann
 HERO_05ae,105081,Stepfather Lor'themar
 HERO_05af_Alleria,107733,Cowgirl Alleria
+HERO_05ag_Sylvanas,108384,Outlaw Sylvanas
+HERO_05ah_Huln,108416,Festival Huln
 HERO_05b,57759,Wanderer Rexxar
 HERO_05bp,229,Steady Shot
 HERO_05bp2,2738,Ballista Shot
@@ -9387,6 +9695,9 @@ HERO_07ai_MechaJaraxxus,107750,Mechadrill-Jaraxxus
 HERO_07aj_Rafaam,107744,Trader Rafaam
 HERO_07ak_Guldan,107745,Corruptor Gul'dan
 HERO_07al_Guldan,107752,Malefic Gul'dan
+HERO_07am_Godfrey,108386,Lord Godfrey
+HERO_07amhp,108387,Life Tap
+HERO_07amhp2,108388,Soul Tap
 HERO_07b,51834,Mecha-Jaraxxus
 HERO_07bp,300,Life Tap
 HERO_07bp2,2744,Soul Tap
@@ -9449,6 +9760,10 @@ HERO_08ao,103768,Celeste-ial
 HERO_08ap,103769,Shipmaster Medivh
 HERO_08aq,106273,Jaina Sanguinar
 HERO_08ar_Saraad,107742,Cardslinger Saraad
+HERO_08as_Jaina,108389,Justice Jaina
+HERO_08ashp,108390,Fireblast
+HERO_08ashp2,108391,Fireblast Rank 2
+HERO_08at_Celeste,108417,Dragon Dance Celeste
 HERO_08b,39117,Khadgar
 HERO_08bp,807,Fireblast
 HERO_08bp2,2739,Fireblast Rank 2
@@ -9505,6 +9820,7 @@ HERO_09ai_Hedanis,107740,Pianoman Hedanis
 HERO_09aj_EliseStarseeker,107730,Elise the Leader
 HERO_09ajhp,107731,Lesser Heal
 HERO_09ajhp2,107732,Heal
+HERO_09ak_Sally,108418,Scarlet Sally
 HERO_09b,54816,Madame Lazul
 HERO_09bp,479,Lesser Heal
 HERO_09bp2,2741,Heal
@@ -9546,6 +9862,10 @@ HERO_10af,106271,Pirate Illidan
 HERO_10ag_Kurtrus,107743,Gunslinger Kurtrus
 HERO_10ah_Illidan,107741,Second Sight Illidan
 HERO_10ai_Illidan,107734,Felreaper Illidan
+HERO_10aj_Aranna,108382,Deadeye Aranna
+HERO_10ak_Kailene,108423,Kailene Evergaze
+HERO_10akhp,108424,Demon Claws
+HERO_10akhp2,108425,Demon's Bite
 HERO_10b,62491,Aranna Starseeker
 HERO_10bbp,62493,Demon Claws
 HERO_10bbp2,62495,Demon's Bite
@@ -9617,6 +9937,7 @@ HERO_11ohp,107726,Ghoul Charge
 HERO_11ohp2,107727,Ghoul Frenzy
 HERO_11p_LichKing,107728,Scourgeborne Arthas
 HERO_11q_LichKing,107739,Thassarian Arthas
+HERO_11r_SaiShadestorm,108419,Festive Sai
 HERO_FB_Juggernaut,41513,Enemy Captain
 HRW02_1,2872,Gearmaster Mechazod
 HRW02_1e,19955,Overclock
@@ -22769,6 +23090,9 @@ TB_BaconShopBob_SKIN_AB,102916,Soulciologist Malicia
 TB_BaconShopBob_SKIN_AC,104477,Lillian Singh
 TB_BaconShopBob_SKIN_AD,104479,Bartender Roberta
 TB_BaconShopBob_SKIN_AE,104480,Announcer Gimblo
+TB_BaconShopBob_SKIN_AF,105056,Lone Ranger Reno
+TB_BaconShopBob_SKIN_AG,105057,Sparkle
+TB_BaconShopBob_SKIN_AH,105058,Anniversary Zephrys
 TB_BaconShopBob_SKIN_AI,105091,Kalecgos
 TB_BaconShopBob_SKIN_B,75592,Ve'nari
 TB_BaconShopBob_SKIN_C,76336,Dragonspeaker Bob
@@ -22809,6 +23133,7 @@ TB_BaconShop_8P_PlayerE,57980,BaconShop8PlayerEnchant
 TB_BaconShop_8p_Reroll_Button,59559,Refresh
 TB_BaconShop_CheckTriples,72675,Check Triples
 TB_BaconShop_DragBuy,59894,Drag To Buy
+TB_BaconShop_DragBuy_Spell,104997,Drag To Buy Spell
 TB_BaconShop_DragSell,59895,Drag To Sell
 TB_BaconShop_FXWatcher,77711,Leaderboard FX Watcher [DNT]
 TB_BaconShop_HERO_01,57633,Edwin VanCleef
@@ -22836,6 +23161,7 @@ TB_BaconShop_HERO_08_SKIN_B,82510,Illidan of the Second Sight
 TB_BaconShop_HERO_10,57891,Trade Prince Gallywix
 TB_BaconShop_HERO_102_SKIN_F,96568,Murloc Lord Saurfang
 TB_BaconShop_HERO_102_SKIN_G,103812,Gladiator Saurfang
+TB_BaconShop_HERO_103_SKIN_D,111063,Hong Bao Blackthorn
 TB_BaconShop_HERO_10_Buddy,77847,Bilgewater Mogul
 TB_BaconShop_HERO_10_Buddy_G,77848,Bilgewater Mogul
 TB_BaconShop_HERO_10_Buddy_Gt2,101509,Smuggled Ring
@@ -22858,6 +23184,7 @@ TB_BaconShop_HERO_11_SKIN_A,78754,Flamewarden Ragnaros
 TB_BaconShop_HERO_11_SKIN_B,80810,Infernojet Ragnaros
 TB_BaconShop_HERO_11_SKIN_C,88936,Abyssal Volcano Ragnaros
 TB_BaconShop_HERO_11_SKIN_D,96580,The Wood-Fired Lord
+TB_BaconShop_HERO_11_SKIN_E,111064,Nian Shou Ragnaros
 TB_BaconShop_HERO_11_Tutorial,105220,Ragnaros the Firelord
 TB_BaconShop_HERO_12,57893,The Rat King
 TB_BaconShop_HERO_12_Buddy,77843,Pigeon Lord
@@ -22913,15 +23240,15 @@ TB_BaconShop_HERO_18_SKIN_A,80074,Salteye Patches
 TB_BaconShop_HERO_18_SKIN_B,88934,Patches the Octopus
 TB_BaconShop_HERO_18_SKIN_C2,94534,Patches the Pyrotechnician
 TB_BaconShop_HERO_18_SKIN_D,96579,Pasta the Pirate
+TB_BaconShop_HERO_18_SKIN_E,105060,Dead Hand Patches
 TB_BaconShop_HERO_19,57956,Giantfin
-TB_BaconShop_HERO_20,57961,Professor Putricide
 TB_BaconShop_HERO_201_SKIN_D,96572,Vol'fin
-TB_BaconShop_HERO_20_SKIN_A,104415,Poughkipsee Putricide
 TB_BaconShop_HERO_21,58021,The Great Akazamzarak
 TB_BaconShop_HERO_21_Buddy,77839,Street Magician
 TB_BaconShop_HERO_21_Buddy_G,77840,Street Magician
 TB_BaconShop_HERO_21_SKIN_A,80786,Crashin' Thrashin' Akazamzarak
 TB_BaconShop_HERO_21_SKIN_B2,94531,Grand Entertainer Akazamzarak
+TB_BaconShop_HERO_21_SKIN_C,111061,Firecracker Akazamzarak
 TB_BaconShop_HERO_22,58024,The Lich King
 TB_BaconShop_HERO_22_Buddy,77841,Arfus
 TB_BaconShop_HERO_22_Buddy_G,77842,Arfus
@@ -23009,7 +23336,7 @@ TB_BaconShop_HERO_35_Buddy_t6e,81863,Pyrobuffed
 TB_BaconShop_HERO_35_Buddy_t6t,81859,Pyrobuff
 TB_BaconShop_HERO_35_Buddy_t7,93390,Mysterybox
 TB_BaconShop_HERO_35_Buddy_t8,93391,Mindflayer Goggles
-TB_BaconShop_HERO_35_Buddy_t82,96021,Mindflayed Player Enchant [DNT]
+TB_BaconShop_HERO_35_Buddy_t82,96021,Mindflayer Goggles Player Enchant (DNT)
 TB_BaconShop_HERO_35_Buddy_t8e,93392,Mindflayed
 TB_BaconShop_HERO_35_SKIN_A,76350,Soggy Yoggy
 TB_BaconShop_HERO_35_SKIN_B,82505,"Yogg-Saron, Devourer of Stars"
@@ -23090,6 +23417,7 @@ TB_BaconShop_HERO_43_SKIN_E2,94524,Flame Whip Brann
 TB_BaconShop_HERO_43_SKIN_F,99062,Brawlin' Brann
 TB_BaconShop_HERO_43_SKIN_G,103827,Liontamer Brann
 TB_BaconShop_HERO_44_SKIN_A,104419,Ivory Queen Sylvanas
+TB_BaconShop_HERO_44_SKIN_B,105061,Dart Huntress Sylvanas
 TB_BaconShop_HERO_45,60362,Arch-Villain Rafaam
 TB_BaconShop_HERO_45_Buddy,77470,Loyal Henchman
 TB_BaconShop_HERO_45_Buddy_G,77726,Loyal Henchman
@@ -23098,6 +23426,7 @@ TB_BaconShop_HERO_45_SKIN_B,80791,Holofist Rafaam
 TB_BaconShop_HERO_45_SKIN_C,82056,Cao Cao Rafaam
 TB_BaconShop_HERO_45_SKIN_D,92193,Arch-Host Rafaam
 TB_BaconShop_HERO_45_SKIN_E,95330,Prime Suspect Rafaam
+TB_BaconShop_HERO_45_SKIN_F,107786,Jailbreak Rafaam
 TB_BaconShop_HERO_47,60364,Tirion Fordring
 TB_BaconShop_HERO_49,60366,Millhouse Manastorm
 TB_BaconShop_HERO_49_Buddy,77803,Magnus Manastorm
@@ -23153,6 +23482,7 @@ TB_BaconShop_HERO_57_Buddy_e,77513,Flow of Time
 TB_BaconShop_HERO_57_SKIN_A,76339,Nozdormu the Bronze
 TB_BaconShop_HERO_57_SKIN_B,92179,Captive Guest Nozdormu
 TB_BaconShop_HERO_57_SKIN_C4,95318,"Nozdormu, Time Warden"
+TB_BaconShop_HERO_57_SKIN_D,107788,Quicksand Nozdormu
 TB_BaconShop_HERO_58,61490,Malygos
 TB_BaconShop_HERO_58_Buddy,77723,Nexus Lord
 TB_BaconShop_HERO_58_Buddy_G,77802,Nexus Lord
@@ -23224,6 +23554,7 @@ TB_BaconShop_HERO_702,97186,The Jailer
 TB_BaconShop_HERO_702_Buddy,98690,Mawsworn Soulkeeper
 TB_BaconShop_HERO_702_Buddy_G,98693,Mawsworn Soulkeeper
 TB_BaconShop_HERO_702_SKIN_A,104414,Kabal Jailer
+TB_BaconShop_HERO_702_SKIN_B,107782,Old Town Jailer
 TB_BaconShop_HERO_70_Buddy,77807,Lil' K.T.
 TB_BaconShop_HERO_70_Buddy_G,77808,Lil' K.T.
 TB_BaconShop_HERO_70_SKIN_A,76351,Pet Salon Bigglesworth
@@ -23233,6 +23564,7 @@ TB_BaconShop_HERO_70_SKIN_D3,94874,Mr. Jigglesworth
 TB_BaconShop_HERO_70_SKIN_E4,95309,"Bigglesworth, Feline Guide"
 TB_BaconShop_HERO_70_SKIN_F,102918,Cozy Cat Bigglesworth
 TB_BaconShop_HERO_70_SKIN_G,106655,"""Mukla"" Bigglesworth"
+TB_BaconShop_HERO_70_SKIN_H,105059,Cat Burglar Bigglesworth
 TB_BaconShop_HERO_71,63601,Jandice Barov
 TB_BaconShop_HERO_71_Buddy,77792,Jandice's Apprentice
 TB_BaconShop_HERO_71_Buddy_G,77793,Jandice's Apprentice
@@ -23242,6 +23574,7 @@ TB_BaconShop_HERO_71_SKIN_B,80666,Shadowpanther Jandice
 TB_BaconShop_HERO_71_SKIN_C,83635,Glamorous Jandice
 TB_BaconShop_HERO_71_SKIN_D4,95311,Little Witch Jandice
 TB_BaconShop_HERO_71_SKIN_E,96574,Jandice Murlov
+TB_BaconShop_HERO_71_SKIN_F,105062,Stand-off Jandice
 TB_BaconShop_HERO_72,63602,Lord Barov
 TB_BaconShop_HERO_72_Buddy,77511,Barov's Apprentice
 TB_BaconShop_HERO_72_Buddy_G,77547,Barov's Apprentice
@@ -23274,6 +23607,7 @@ TB_BaconShop_HERO_76_SKIN_A,80789,Mechastorm Al'Akir
 TB_BaconShop_HERO_76_SKIN_B,82513,Al'Akir the Skybreaker
 TB_BaconShop_HERO_76_SKIN_C,88940,Al'Akir the Whirlpool
 TB_BaconShop_HERO_76_SKIN_D,96582,Al'Akir the Sweetlord
+TB_BaconShop_HERO_76_SKIN_E,107785,Bulletstorm Al'Akir
 TB_BaconShop_HERO_78,64475,Chenvaala
 TB_BaconShop_HERO_78_Buddy,77780,Snow Elemental
 TB_BaconShop_HERO_78_Buddy_G,77781,Snow Elemental
@@ -23297,6 +23631,7 @@ TB_BaconShop_HERO_91_SKIN_B,80780,Stockingstuffer Zephrys
 TB_BaconShop_HERO_91_SKIN_C,82053,Zhuge Liang Zephrys
 TB_BaconShop_HERO_91_SKIN_D,82503,Goldenstar Zephrys
 TB_BaconShop_HERO_91_SKIN_E,88942,Zephrys the Tide-Turner
+TB_BaconShop_HERO_91_SKIN_F,107787,Dune Dweller Zephrys
 TB_BaconShop_HERO_92,66196,Y'Shaarj
 TB_BaconShop_HERO_92_Buddy,77857,Baby Y'Shaarj
 TB_BaconShop_HERO_92_Buddy_G,77858,Baby Y'Shaarj
@@ -23309,6 +23644,7 @@ TB_BaconShop_HERO_93_Buddy,77811,Baby N'Zoth
 TB_BaconShop_HERO_93_Buddy_G,77812,Baby N'Zoth
 TB_BaconShop_HERO_93_SKIN_A,78746,Cowboy N'Zoth
 TB_BaconShop_HERO_93_SKIN_B,102861,Mixmaster N'Zoth
+TB_BaconShop_HERO_93_SKIN_C,107789,Oil Guzzler N'Zoth
 TB_BaconShop_HERO_94,67356,Tickatus
 TB_BaconShop_HERO_94_Buddy,77845,Ticket Collector
 TB_BaconShop_HERO_94_Buddy_G,77846,Ticket Collector
@@ -23426,6 +23762,7 @@ TB_BaconShop_HP_067,61918,Evolving Electricity
 TB_BaconShop_HP_068,61919,Imprison
 TB_BaconShop_HP_068e,61936,Imprisoned
 TB_BaconShop_HP_068e2,62265,Awakened
+TB_BaconShop_HP_068e3,109351,Unplayable
 TB_BaconShop_HP_068pe,62006,ImprisonedWatcher
 TB_BaconShop_HP_069,61851,Wingmen
 TB_BaconShop_HP_069e,63161,Wingmen
@@ -25535,6 +25872,7 @@ TTN_02t30e1,105446,Fortified
 TTN_039,95917,Watcher of the Sun
 TTN_039t,95918,Watcher of the Sun
 TTN_042,95935,Cyclopian Crusher
+TTN_042e,110659,Cyclopian Crushing
 TTN_042t,95936,Cyclopian Crusher
 TTN_060t,96479,Runic Shortsword
 TTN_060t1,96480,Runic Axe
@@ -26896,7 +27234,6 @@ UNG_067,41222,The Caverns Below
 UNG_067t1,41221,Crystal Core
 UNG_067t1e,42991,Crystallized
 UNG_067t1e2,46043,Crystallized
-UNG_067t1e3,56955,Crystallized
 UNG_070,41241,Tol'vir Stoneshaper
 UNG_070e,41240,Stonewall
 UNG_071,41242,Giant Mastodon
@@ -27032,6 +27369,7 @@ UNG_937,41478,Primalfin Lookout
 UNG_938,41479,Hot Spring Guardian
 UNG_940,41494,Awaken the Makers
 UNG_940t8,41950,"Amara, Warden of Hope"
+UNG_940t8e,111583,Warded By Hope
 UNG_941,41496,Primordial Glyph
 UNG_941e,42118,Primal Magic
 UNG_942,41499,Unite the Murlocs
@@ -27973,6 +28311,7 @@ WW_356,100616,Harrowing Ox
 WW_356e,104459,Ox Chill
 WW_357,100619,Maw and Paw
 WW_358,100627,Farm Hand
+WW_358e,111091,Handy
 WW_359,100641,Sheriff Barrelbrim
 WW_359t,103339,Badlands Jail
 WW_360,101093,Azerite Chain Gang
