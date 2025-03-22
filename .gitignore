@@ -1,2 +1,7 @@
+/env
+/wenv
+/build
+/dist
+compile.sh
 /wstone_test
 data.json

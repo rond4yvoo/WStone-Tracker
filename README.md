@@ -1,6 +1,20 @@
-WStone Tracker is a Python script used to manage .dds files used for Hearthstone modding with SpecialK.
+WStone Tracker is an application used to manage .dds files used for Hearthstone modding with SpecialK.
 
 # Getting Started
+
+This application is only available for Windows and Linux platforms. Please compile the application if you want to use it on Mac.
+
+## Windows
+
+* Unzip the release archive
+* Run `wstone.exe`
+
+## Linux
+
+* Unzip the release archive
+* Run `wstone`
+
+# Compilation for Developers
 
 ## Windows
 

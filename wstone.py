@@ -25,16 +25,21 @@ class MainWindow:
     #   search_query is used to search IDs and hex codes
     
     def __init__(self):
+        if getattr(sys, 'frozen', False):
+            self.application_path = os.path.dirname(sys.executable)
+        elif __file__:
+            self.application_path = os.path.dirname(__file__)
+
         self.root = tk.Tk()
-        self.root.geometry('800x600')
+        self.root.geometry('800x650')
         self.root.resizable(False, False)
         self.root.title('Whorestone Tracker')
 
         self.root.grid_rowconfigure(0, weight=1)
         self.root.grid_columnconfigure(0, weight=1)
 
-        self.mapping_df_path = os.path.join(sys.path[0], 'csv', 'final.csv')
-        self.data_path = os.path.join(sys.path[0], 'data.json')
+        self.mapping_df_path = os.path.join(self.application_path, 'csv', 'final.csv')
+        self.data_path = os.path.join(self.application_path, 'data.json')
 
         self.texdirname = StringVar()
         self.texdirname.set('No path selected')
@@ -83,6 +88,9 @@ class MainWindow:
             self.data['options']['flip_image'] = True
     
     def load_folderpath(self, folderpath):
+        self.root.withdraw()
+        loading_splash = LoadingSplash(self.root)
+
         self.texdirname.set('Path: ' + folderpath)
         self.data['tex_dir'] = folderpath
         fullimgpath = glob.glob(folderpath + '/**/*.[Dd][Dd][Ss]', recursive=True)
@@ -99,6 +107,9 @@ class MainWindow:
         tex_dict = {'tex_relpath': tex_relpath, 'tex_hex': tex_hex, 'tex_id': tex_id}
         self.tex_df = pd.DataFrame(tex_dict)
         self.tex_search_df = self.tex_df
+
+        loading_splash.destroy()
+        self.root.deiconify()
 
     def reload(self):
         self.load_folderpath(self.data['tex_dir'])
@@ -559,6 +570,21 @@ class DupeWindow:
             padx=5,
             pady=5
         )
+
+class LoadingSplash(tk.Toplevel):
+    def __init__(self, parent):
+        tk.Toplevel.__init__(self, parent)
+        self.title("Loading")
+        self.geometry('300x200')
+        self.resizable(False, False)
+        label = tk.Label(self, 
+                 text="Loading...",
+                 font=("Arial", 16, "bold"),      
+                )
+        
+        label.grid(row=0, column=0)
+        label.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
+        self.update()
 
 def main():
     main = MainWindow()
